@@ -48,8 +48,8 @@
 <!-- ============ Шапка ============ -->
 <header class="header" data-header>
   <div class="header__inner">
-    <a class="header__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
-      <img src="img/logo.png" alt="Mediaseller" width="300" height="97">
+    <a class="logo header__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
+      <img class="logo__image" src="img/logo.png" alt="Mediaseller" width="300" height="97">
     </a>
     <nav class="header__nav" aria-label="Разделы сайта">
       <a class="header__link" href="https://mediaseller.agency/prajs-2021">Услуги</a>
@@ -65,9 +65,9 @@
     </nav>
     <div class="header__actions">
       <button class="btn" type="button" data-modal-open="request">Обсудить задачу</button>
-      <a class="header__contact" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-      <a class="header__contact" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
-      <a class="header__contact" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
+      <a class="social social--plain header__contact" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
+      <a class="social social--plain header__contact" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+      <a class="social social--plain header__contact" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
     </div>
     <button class="header__burger" type="button" data-menu-open aria-controls="menu" aria-expanded="false">Меню</button>
   </div>
@@ -76,8 +76,8 @@
 <!-- ============ Мобильное меню ============ -->
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu__bar">
-    <a class="header__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
-      <img src="img/logo.png" alt="Mediaseller" width="300" height="97">
+    <a class="logo header__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
+      <img class="logo__image" src="img/logo.png" alt="Mediaseller" width="300" height="97">
     </a>
     <button class="menu__close" type="button" data-menu-close aria-label="Закрыть меню"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-close"></use></svg></button>
   </div>
@@ -110,16 +110,16 @@
   </div>
   <div class="hero__body">
     <ul class="hero__chips">
-      <li><a class="chip chip--accent" href="#ai">AI-ролики</a></li>
-      <li><a class="chip" href="#funnel">Контент для воронки</a></li>
-      <li><a class="chip" href="#shooting">Съёмка</a></li>
-      <li><a class="chip" href="#render">3D</a></li>
+      <li><a class="chip chip--link chip--accent" href="#ai">AI-ролики</a></li>
+      <li><a class="chip chip--link" href="#funnel">Контент для воронки</a></li>
+      <li><a class="chip chip--link" href="#shooting">Съёмка</a></li>
+      <li><a class="chip chip--link" href="#render">3D</a></li>
     </ul>
     <h1 class="hero__title">Креативный продакшн для брендов: AI-видео, съёмка и&nbsp;3D-визуализация</h1>
     <p class="hero__lead">Создаём рекламные ролики и&nbsp;визуальный контент для брендов&nbsp;— от&nbsp;идеи и&nbsp;сценария до&nbsp;готовых материалов для кампаний и&nbsp;площадок</p>
     <div class="hero__actions">
-      <button class="btn btn--lg" type="button" data-modal-open="request">Обсудить задачу</button>
-      <a class="btn btn--lg btn--ghost" href="#works">Смотреть работы</a>
+      <button class="btn btn--lg hero__button" type="button" data-modal-open="request">Обсудить задачу</button>
+      <a class="btn btn--lg btn--ghost hero__button" href="#works">Смотреть работы</a>
     </div>
   </div>
 </section>
@@ -130,7 +130,7 @@
   <p class="promo__text">
     <span data-typed="Создаём AI-ролики для брендов|Снимаем рекламные ролики и фильмы о компании|Делаем серии вертикальных видео для воронки продаж|Создаём 3D-визуализации экстерьеров и интерьеров">Создаём AI-ролики для брендов</span><span class="promo__caret" aria-hidden="true"></span>
   </p>
-  <button class="btn btn--dark btn--pill" type="button" data-modal-open="request">Обсудить задачу</button>
+  <button class="btn btn--dark btn--pill promo__button" type="button" data-modal-open="request">Обсудить задачу</button>
 </div>
 
 <!-- ============ Клиенты ============ -->
@@ -184,7 +184,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="ODEVI" data-video="video/odevi.mp4" data-preview="video/preview/odevi.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: ODEVI">
               <img class="case__poster" src="img/cases/odevi.jpg" alt="ODEVI: 30-секундная реклама фруктового пюре" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
             </button>
             <h3 class="case__title">ODEVI</h3>
             <p class="case__text">AI-ролик · 30-секундная реклама фруктового пюре</p>
@@ -194,7 +194,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Курортная Ривьера»" data-video="video/riviera-kitchen.mp4" data-preview="video/preview/riviera-kitchen.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Курортная Ривьера»">
               <img class="case__poster" src="img/cases/riviera-kitchen.jpg" alt="«Курортная Ривьера»: ролик о кухне ресторана, пятигорск" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:36</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:36</span>
             </button>
             <h3 class="case__title">«Курортная Ривьера»</h3>
             <p class="case__text">AI-ролик · ролик о кухне ресторана, Пятигорск</p>
@@ -204,7 +204,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Курортная Ривьера»" data-video="video/riviera-hall.mp4" data-preview="video/preview/riviera-hall.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Курортная Ривьера»">
               <img class="case__poster" src="img/cases/riviera-hall.jpg" alt="«Курортная Ривьера»: зал ресторана как площадка для праздников" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:33</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:33</span>
             </button>
             <h3 class="case__title">«Курортная Ривьера»</h3>
             <p class="case__text">AI-ролик · зал ресторана как площадка для праздников</p>
@@ -214,7 +214,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="ЖК «Речные кварталы»" data-video="video/rechnye-kvartaly.mp4" data-preview="video/preview/rechnye-kvartaly.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/cases/rechnye-kvartaly.jpg" alt="ЖК «Речные кварталы»: рекламный ролик для «девелопмент-юг»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">AI-ролик · рекламный ролик для «Девелопмент-Юг»</p>
@@ -224,7 +224,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Два этажа»" data-video="video/dva-etazha-tour.mp4" data-preview="video/preview/dva-etazha-tour.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Два этажа»">
               <img class="case__poster" src="img/cases/dva-etazha-tour.jpg" alt="«Два этажа»: видеотур по коттеджу, барнаул" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>2:12</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>2:12</span>
             </button>
             <h3 class="case__title">«Два этажа»</h3>
             <p class="case__text">AI-ролик · видеотур по коттеджу, Барнаул</p>
@@ -234,7 +234,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Два этажа»" data-video="video/dva-etazha-short.mp4" data-preview="video/preview/dva-etazha-short.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Два этажа»">
               <img class="case__poster" src="img/cases/dva-etazha-short.jpg" alt="«Два этажа»: 30-секундный ролик коттеджа для баннеров" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:35</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:35</span>
             </button>
             <h3 class="case__title">«Два этажа»</h3>
             <p class="case__text">AI-ролик · 30-секундный ролик коттеджа для баннеров</p>
@@ -244,7 +244,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Девелопмент-Юг»" data-video="video/development-yug-oblet.mp4" data-preview="video/preview/development-yug-oblet.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Девелопмент-Юг»">
               <img class="case__poster" src="img/cases/development-yug-oblet.jpg" alt="«Девелопмент-Юг»: видеооблёт квартиры по планировке" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>1:08</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>1:08</span>
             </button>
             <h3 class="case__title">«Девелопмент-Юг»</h3>
             <p class="case__text">AI-ролик · видеооблёт квартиры по планировке</p>
@@ -254,7 +254,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="Краснодарский институт кооперации" data-video="video/institut-film.mp4" data-preview="video/preview/institut-film.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский институт кооперации">
               <img class="case__poster" src="img/cases/institut-film.jpg" alt="Краснодарский институт кооперации: имиджевый фильм о вузе" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>2:59</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>2:59</span>
             </button>
             <h3 class="case__title">Краснодарский институт кооперации</h3>
             <p class="case__text">AI-ролик · имиджевый фильм о вузе</p>
@@ -264,7 +264,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="Краснодарский институт кооперации" data-video="video/institut-tv.mp4" data-preview="video/preview/institut-tv.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский институт кооперации">
               <img class="case__poster" src="img/cases/institut-tv.jpg" alt="Краснодарский институт кооперации: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">Краснодарский институт кооперации</h3>
             <p class="case__text">AI-ролик · ТВ-реклама</p>
@@ -274,7 +274,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Квартира на море»" data-video="video/kvartira-na-more.mp4" data-preview="video/preview/kvartira-na-more.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Квартира на море»">
               <img class="case__poster" src="img/cases/kvartira-na-more.jpg" alt="«Квартира на море»: ролик для авито и циан, геленджик" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:49</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:49</span>
             </button>
             <h3 class="case__title">«Квартира на море»</h3>
             <p class="case__text">AI-ролик · ролик для Авито и ЦИАН, Геленджик</p>
@@ -284,7 +284,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="Ортопедическая обувь" data-video="video/ortopedicheskaya-obuv.mp4" data-preview="video/preview/ortopedicheskaya-obuv.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Ортопедическая обувь">
               <img class="case__poster" src="img/cases/ortopedicheskaya-obuv.jpg" alt="Ортопедическая обувь: презентационный ролик модели" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:23</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:23</span>
             </button>
             <h3 class="case__title">Ортопедическая обувь</h3>
             <p class="case__text">AI-ролик · презентационный ролик модели</p>
@@ -294,7 +294,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Ёлкин Матрас»" data-video="video/elkin-matras.mp4" data-preview="video/preview/elkin-matras.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Ёлкин Матрас»">
               <img class="case__poster" src="img/cases/elkin-matras.jpg" alt="«Ёлкин Матрас»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Ёлкин Матрас»</h3>
             <p class="case__text">AI-ролик · ТВ-реклама</p>
@@ -304,7 +304,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Аквамир»" data-video="video/aquamir-23-february.mp4" data-preview="video/preview/aquamir-23-february.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
               <img class="case__poster" src="img/cases/aquamir-23-february.jpg" alt="«Аквамир»: тв-реклама к 23 февраля" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Аквамир»</h3>
             <p class="case__text">AI-ролик · ТВ-реклама к 23 февраля</p>
@@ -314,7 +314,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Аквамир»" data-video="video/aquamir-8-march.mp4" data-preview="video/preview/aquamir-8-march.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
               <img class="case__poster" src="img/cases/aquamir-8-march.jpg" alt="«Аквамир»: тв-реклама к 8 марта" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Аквамир»</h3>
             <p class="case__text">AI-ролик · ТВ-реклама к 8 Марта</p>
@@ -324,7 +324,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="Краснодарский ипподром" data-video="video/ippodrom.mp4" data-preview="video/preview/ippodrom.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский ипподром">
               <img class="case__poster" src="img/cases/ippodrom.jpg" alt="Краснодарский ипподром: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">Краснодарский ипподром</h3>
             <p class="case__text">AI-ролик · ТВ-реклама</p>
@@ -334,7 +334,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-1.mp4" data-preview="video/preview/tsvety-yuga-1.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
               <img class="case__poster" src="img/cases/tsvety-yuga-1.jpg" alt="«Цветы Юга»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Цветы Юга»</h3>
             <p class="case__text">AI-ролик · ТВ-реклама</p>
@@ -344,7 +344,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-2.mp4" data-preview="video/preview/tsvety-yuga-2.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
               <img class="case__poster" src="img/cases/tsvety-yuga-2.jpg" alt="«Цветы Юга»: тв-реклама, вторая версия" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Цветы Юга»</h3>
             <p class="case__text">AI-ролик · ТВ-реклама, вторая версия</p>
@@ -354,7 +354,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Наш Лецитин»" data-video="video/nash-lecitin.mp4" data-preview="video/preview/nash-lecitin.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Наш Лецитин»">
               <img class="case__poster" src="img/cases/nash-lecitin.jpg" alt="«Наш Лецитин»: тв-ролик для бренда бадов" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
             </button>
             <h3 class="case__title">«Наш Лецитин»</h3>
             <p class="case__text">AI-ролик · ТВ-ролик для бренда БАДов</p>
@@ -364,7 +364,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="«Сахалин»" data-video="video/sakhalin.mp4" data-preview="video/preview/sakhalin.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Сахалин»">
               <img class="case__poster" src="img/cases/sakhalin.jpg" alt="«Сахалин»: тв-ролик для магазина морепродуктов" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Сахалин»</h3>
             <p class="case__text">AI-ролик · ТВ-ролик для магазина морепродуктов</p>
@@ -374,7 +374,7 @@
           <article class="case" data-case data-kind="AI-ролик" data-title="Modern Clinic" data-video="video/modern-clinic.mp4" data-preview="video/preview/modern-clinic.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Modern Clinic">
               <img class="case__poster" src="img/cases/modern-clinic.jpg" alt="Modern Clinic: тв-реклама клиники" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">Modern Clinic</h3>
             <p class="case__text">AI-ролик · ТВ-реклама клиники</p>
@@ -383,9 +383,9 @@
     </ul>
   </div>
 
-  <div class="banner theme--light reveal">
+  <div class="banner theme theme--light reveal">
     <div class="banner__body">
-      <p class="banner__label"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>Разовый проект</p>
+      <p class="banner__label"><svg class="icon banner__label-icon" aria-hidden="true"><use href="#i-spark"></use></svg>Разовый проект</p>
       <h3 class="banner__title">Creative Campaign</h3>
       <p class="banner__text">Формат разового проекта: идея, визуальная концепция и&nbsp;готовый AI-ролик с&nbsp;адаптациями под площадки.</p>
       <div class="banner__actions">
@@ -413,30 +413,30 @@
         <h3 class="bento__title">Серия вертикальных видео</h3>
         <p class="bento__text">Серия вертикальных видео для разных этапов пути клиента: от&nbsp;первого знакомства с&nbsp;брендом до&nbsp;решения о&nbsp;покупке.</p>
         <div class="bento__actions">
-          <button class="btn btn--md" type="button" data-modal-open="request">Обсудить серию</button>
+          <button class="btn btn--md bento__button" type="button" data-modal-open="request">Обсудить серию</button>
         </div>
       </div>
       <div class="bento__reel">
-            <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="Grand Resort Jermuk" data-video="video/grand-resort-jermuk.mp4" data-preview="video/preview/grand-resort-jermuk.mp4" data-portrait data-autoplay>
+            <article class="case case--portrait case--bare bento__clip" data-case data-kind="Вертикальное видео" data-title="Grand Resort Jermuk" data-video="video/grand-resort-jermuk.mp4" data-preview="video/preview/grand-resort-jermuk.mp4" data-portrait data-autoplay>
               <button class="case__media" type="button" aria-label="Смотреть ролик: Grand Resort Jermuk">
                 <img class="case__poster" src="img/cases/grand-resort-jermuk.jpg" alt="Grand Resort Jermuk: ролик для отеля" width="540" height="960" loading="lazy">
-                <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:28</span>
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:28</span>
               </button>
               <h3 class="case__title">Grand Resort Jermuk</h3>
               <p class="case__text">Вертикальное видео · ролик для отеля</p>
             </article>
-            <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="Mounthree" data-video="video/mounthree.mp4" data-preview="video/preview/mounthree.mp4" data-portrait data-autoplay>
+            <article class="case case--portrait case--bare bento__clip" data-case data-kind="Вертикальное видео" data-title="Mounthree" data-video="video/mounthree.mp4" data-preview="video/preview/mounthree.mp4" data-portrait data-autoplay>
               <button class="case__media" type="button" aria-label="Смотреть ролик: Mounthree">
                 <img class="case__poster" src="img/cases/mounthree.jpg" alt="Mounthree: ролик для отеля" width="540" height="960" loading="lazy">
-                <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:46</span>
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:46</span>
               </button>
               <h3 class="case__title">Mounthree</h3>
               <p class="case__text">Вертикальное видео · ролик для отеля</p>
             </article>
-            <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="«Девелопмент-Юг»" data-video="video/development-yug-oblet-vertical.mp4" data-preview="video/preview/development-yug-oblet-vertical.mp4" data-portrait data-autoplay>
+            <article class="case case--portrait case--bare bento__clip" data-case data-kind="Вертикальное видео" data-title="«Девелопмент-Юг»" data-video="video/development-yug-oblet-vertical.mp4" data-preview="video/preview/development-yug-oblet-vertical.mp4" data-portrait data-autoplay>
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Девелопмент-Юг»">
                 <img class="case__poster" src="img/cases/development-yug-oblet-vertical.jpg" alt="«Девелопмент-Юг»: видеооблёт квартиры" width="540" height="960" loading="lazy">
-                <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
               </button>
               <h3 class="case__title">«Девелопмент-Юг»</h3>
               <p class="case__text">Вертикальное видео · видеооблёт квартиры</p>
@@ -465,7 +465,7 @@
 
 <!-- ============ Строка обратного звонка ============ -->
 <div class="callback reveal">
-  <div class="callback__bar theme--light">
+  <div class="callback__bar theme theme--light">
     <svg class="icon callback__icon" aria-hidden="true"><use href="#i-spark"></use></svg>
     <p class="callback__text">Есть задача? Оставьте телефон&nbsp;— обсудим формат</p>
     <form class="callback__form" data-form="callback" novalidate>
@@ -473,7 +473,7 @@
       <button class="btn btn--md btn--pill" type="submit">Перезвоните мне</button>
     </form>
   </div>
-  <p class="callback__note">Нажимая кнопку, вы даёте согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></p>
+  <p class="callback__note">Нажимая кнопку, вы даёте согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="callback__link" href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></p>
 </div>
 
 <!-- ============ Направление 3. Съёмка ============ -->
@@ -492,7 +492,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-kubani.mp4" data-preview="video/preview/karavay-kubani.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
               <img class="case__poster" src="img/cases/karavay-kubani.jpg" alt="«Каравай Кубани»: имиджевый ролик о хлебе «деревенский»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
             </button>
             <h3 class="case__title">«Каравай Кубани»</h3>
             <p class="case__text">Съёмка · имиджевый ролик о хлебе «Деревенский»</p>
@@ -502,7 +502,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="«Сантехника Онлайн»" data-video="video/santehnika-online.mp4" data-preview="video/preview/santehnika-online.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Сантехника Онлайн»">
               <img class="case__poster" src="img/cases/santehnika-online.jpg" alt="«Сантехника Онлайн»: рекламный ролик «измени отражение»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
             </button>
             <h3 class="case__title">«Сантехника Онлайн»</h3>
             <p class="case__text">Съёмка · рекламный ролик «Измени отражение»</p>
@@ -512,7 +512,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="Васюринский мясокомбинат" data-video="video/vasyurinskiy.mp4" data-preview="video/preview/vasyurinskiy.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Васюринский мясокомбинат">
               <img class="case__poster" src="img/cases/vasyurinskiy.jpg" alt="Васюринский мясокомбинат: ролик для федеральных телеканалов" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
             </button>
             <h3 class="case__title">Васюринский мясокомбинат</h3>
             <p class="case__text">Съёмка · ролик для федеральных телеканалов</p>
@@ -522,7 +522,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="DIM Coffee" data-video="video/dim-coffee.mp4" data-preview="video/preview/dim-coffee.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: DIM Coffee">
               <img class="case__poster" src="img/cases/dim-coffee.jpg" alt="DIM Coffee: рекламный ролик «мальдивы вместе с dim coffee»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:19</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:19</span>
             </button>
             <h3 class="case__title">DIM Coffee</h3>
             <p class="case__text">Съёмка · рекламный ролик «Мальдивы вместе с DIM Coffee»</p>
@@ -532,7 +532,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-cube.mp4" data-preview="video/preview/solaair-cube.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
               <img class="case__poster" src="img/cases/solaair-cube.jpg" alt="SolaAir: презентация арт-объекта «зеркальный куб»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
             </button>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Зеркальный куб»</p>
@@ -542,7 +542,7 @@
           <article class="case" data-case data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-lenty.mp4" data-preview="video/preview/solaair-lenty.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
               <img class="case__poster" src="img/cases/solaair-lenty.jpg" alt="SolaAir: презентация арт-объекта «георгиевские ленты»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
             </button>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Георгиевские ленты»</p>
@@ -568,7 +568,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-evening.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-yard-evening-s.jpg" alt="Двор жилого комплекса: экстерьер, вечернее освещение" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, вечернее освещение</p>
@@ -578,7 +578,7 @@
           <article class="case" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-video="video/rechnye-kvartaly-oblet.mp4" data-preview="video/preview/rechnye-kvartaly-oblet.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/cases/rechnye-kvartaly-oblet.jpg" alt="ЖК «Речные кварталы»: видеооблёт квартиры с отделкой" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>1:01</span>
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>1:01</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · видеооблёт квартиры с отделкой</p>
@@ -588,7 +588,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-living-furnished.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/renders/rechnye-living-furnished-s.jpg" alt="ЖК «Речные кварталы»: гостиная с мебелью, «девелопмент-юг»" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · гостиная с мебелью, «Девелопмент-Юг»</p>
@@ -598,7 +598,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-living-finish.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/renders/rechnye-living-finish-s.jpg" alt="ЖК «Речные кварталы»: та же гостиная с чистовой отделкой" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · та же гостиная с чистовой отделкой</p>
@@ -608,7 +608,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-living-whitebox.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/renders/rechnye-living-whitebox-s.jpg" alt="ЖК «Речные кварталы»: та же гостиная в отделке white box" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · та же гостиная в отделке white box</p>
@@ -618,7 +618,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-terrace.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-terrace-s.jpg" alt="Двор жилого комплекса: экстерьер, зона отдыха" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, зона отдыха</p>
@@ -628,7 +628,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-kitchen-living.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
               <img class="case__poster" src="img/renders/central-kitchen-living-s.jpg" alt="ЖК «Центральный»: кухня-гостиная, «девелопмент-юг»" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Центральный»</h3>
             <p class="case__text">3D-визуализация · кухня-гостиная, «Девелопмент-Юг»</p>
@@ -638,7 +638,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-office.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
               <img class="case__poster" src="img/renders/central-office-s.jpg" alt="ЖК «Центральный»: кабинет" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Центральный»</h3>
             <p class="case__text">3D-визуализация · кабинет</p>
@@ -648,7 +648,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-day.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-yard-day-s.jpg" alt="Двор жилого комплекса: экстерьер, вид сверху" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, вид сверху</p>
@@ -658,7 +658,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-bedroom.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/renders/rechnye-bedroom-s.jpg" alt="ЖК «Речные кварталы»: спальня с мебелью" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · спальня с мебелью</p>
@@ -668,7 +668,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-kitchen.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/renders/rechnye-kitchen-s.jpg" alt="ЖК «Речные кварталы»: кухня с мебелью" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · кухня с мебелью</p>
@@ -678,7 +678,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-playground.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-playground-s.jpg" alt="Двор жилого комплекса: экстерьер, детская площадка" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, детская площадка</p>
@@ -688,7 +688,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-family-room.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
               <img class="case__poster" src="img/renders/central-family-room-s.jpg" alt="ЖК «Центральный»: кухня-гостиная для семьи с ребёнком" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Центральный»</h3>
             <p class="case__text">3D-визуализация · кухня-гостиная для семьи с ребёнком</p>
@@ -698,7 +698,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-bedroom.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
               <img class="case__poster" src="img/renders/central-bedroom-s.jpg" alt="ЖК «Центральный»: спальня" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Центральный»</h3>
             <p class="case__text">3D-визуализация · спальня</p>
@@ -708,7 +708,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-table.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-table-s.jpg" alt="Двор жилого комплекса: экстерьер, общий стол" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, общий стол</p>
@@ -718,7 +718,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-pergola.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
               <img class="case__poster" src="img/renders/exterior-pergola-s.jpg" alt="Двор жилого комплекса: экстерьер, беседка" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">Двор жилого комплекса</h3>
             <p class="case__text">3D-визуализация · экстерьер, беседка</p>
@@ -728,7 +728,7 @@
           <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-wardrobe.jpg">
             <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
               <img class="case__poster" src="img/renders/central-wardrobe-s.jpg" alt="ЖК «Центральный»: гардеробная" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
             </button>
             <h3 class="case__title">ЖК «Центральный»</h3>
             <p class="case__text">3D-визуализация · гардеробная</p>
@@ -737,9 +737,9 @@
     </ul>
   </div>
 
-  <div class="banner theme--light reveal">
+  <div class="banner theme theme--light reveal">
     <div class="banner__body">
-      <p class="banner__label"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>3D-визуализация</p>
+      <p class="banner__label"><svg class="icon banner__label-icon" aria-hidden="true"><use href="#i-spark"></use></svg>3D-визуализация</p>
       <h3 class="banner__title">Экстерьеры и&nbsp;интерьеры</h3>
       <p class="banner__text">Показываем объект до&nbsp;того, как он построен: дворы, фасады, квартиры в&nbsp;разных вариантах отделки.</p>
       <div class="banner__actions">
@@ -776,7 +776,7 @@
             <span class="photo__number" aria-hidden="true">1</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -788,7 +788,7 @@
             <span class="photo__number" aria-hidden="true">2</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -800,7 +800,7 @@
             <span class="photo__number" aria-hidden="true">3</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -812,7 +812,7 @@
             <span class="photo__number" aria-hidden="true">4</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -824,7 +824,7 @@
             <span class="photo__number" aria-hidden="true">5</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -836,7 +836,7 @@
             <span class="photo__number" aria-hidden="true">6</span>
             <div class="photo__body">
               <div class="photo__frame">
-                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-photo"></use></svg>
+                <svg class="icon icon--stroke photo__icon" aria-hidden="true"><use href="#i-photo"></use></svg>
                 Фото из поездки
               </div>
               <figcaption class="photo__caption">Город, страна · студия или событие · год</figcaption>
@@ -847,7 +847,7 @@
   </div>
 </section>
 
-<div class="zone theme--light">
+<div class="zone theme theme--light">
 
   <!-- ============ Как строится работа ============ -->
   <section class="section" id="process">
@@ -887,14 +887,14 @@
       <div class="faq__aside">
         <p class="faq__hint">Не&nbsp;нашли ответ?</p>
         <p class="faq__note">Расскажите о&nbsp;задаче&nbsp;— подберём формат и&nbsp;ответим на&nbsp;вопросы по&nbsp;проекту.</p>
-        <button class="btn btn--md" type="button" data-modal-open="request">Задать вопрос</button>
+        <button class="btn btn--md faq__button" type="button" data-modal-open="request">Задать вопрос</button>
       </div>
       <ul class="faq__list" data-faq>
         <li class="faq__item">
           <h3>
             <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-1">
               Какие видео вы создаёте?
-              <span class="faq__toggle"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+              <span class="faq__toggle"><svg class="icon icon--stroke faq__toggle-icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
             </button>
           </h3>
           <div class="faq__answer" id="faq-1">
@@ -907,7 +907,7 @@
           <h3>
             <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-2">
               Когда выбирать AI, а&nbsp;когда съёмку?
-              <span class="faq__toggle"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+              <span class="faq__toggle"><svg class="icon icon--stroke faq__toggle-icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
             </button>
           </h3>
           <div class="faq__answer" id="faq-2">
@@ -920,7 +920,7 @@
           <h3>
             <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-3">
               Как устроен удалённый продакшн?
-              <span class="faq__toggle"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+              <span class="faq__toggle"><svg class="icon icon--stroke faq__toggle-icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
             </button>
           </h3>
           <div class="faq__answer" id="faq-3">
@@ -933,7 +933,7 @@
           <h3>
             <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-4">
               Какие задачи решает серия вертикальных роликов?
-              <span class="faq__toggle"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+              <span class="faq__toggle"><svg class="icon icon--stroke faq__toggle-icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
             </button>
           </h3>
           <div class="faq__answer" id="faq-4">
@@ -946,7 +946,7 @@
           <h3>
             <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-5">
               Какие объекты подходят для 3D-визуализации?
-              <span class="faq__toggle"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+              <span class="faq__toggle"><svg class="icon icon--stroke faq__toggle-icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
             </button>
           </h3>
           <div class="faq__answer" id="faq-5">
@@ -960,7 +960,7 @@
   </section>
 
   <!-- ============ Заявка ============ -->
-  <section class="request theme--dark" id="request">
+  <section class="request theme theme--dark" id="request">
     <div class="request__intro">
       <h2 class="request__title">Обсудим задачу вашего бренда и&nbsp;подберём формат креативного продакшна</h2>
       <p class="request__lead">Оставьте контакты и&nbsp;пару слов о&nbsp;задаче. Работаем с&nbsp;заказчиками из&nbsp;любых регионов России и&nbsp;СНГ.</p>
@@ -1001,7 +1001,7 @@
       </label>
       <label class="form__consent">
         <input class="form__checkbox" type="checkbox" name="consent" required>
-        <span>Я даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+        <span>Я даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="form__link" href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
       </label>
       <button class="btn btn--lg form__submit" type="submit">Обсудить задачу<svg class="icon icon--stroke btn__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
     </form>
@@ -1014,8 +1014,8 @@
 <!-- ============ Подвал ============ -->
 <footer class="footer">
   <div class="footer__top">
-    <a class="footer__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
-      <img src="img/logo.png" alt="Mediaseller" width="300" height="97" loading="lazy">
+    <a class="logo footer__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
+      <img class="logo__image" src="img/logo.png" alt="Mediaseller" width="300" height="97" loading="lazy">
     </a>
     <a class="footer__shout" href="https://t.me/Diseller" target="_blank" rel="noopener">Написать в&nbsp;Telegram</a>
     <a class="footer__shout" href="mailto:ceo@mediaseller.agency">ceo@mediaseller.agency</a>
@@ -1023,9 +1023,9 @@
       <a class="footer__brief" href="#works"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>Портфолио</a>
       <div class="footer__capsule">
         <button class="btn btn--pill" type="button" data-modal-open="request">Обсудить задачу</button>
-        <a class="footer__contact" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-        <a class="footer__contact" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
-        <a class="footer__contact" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
+        <a class="social" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
+        <a class="social" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+        <a class="social" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
       </div>
     </div>
   </div>
@@ -1099,7 +1099,7 @@
   <div class="modal__dialog">
     <div class="popup">
       <div>
-        <p class="popup__title" id="popup-title"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>Обсудим задачу вашего бренда</p>
+        <p class="popup__title" id="popup-title"><svg class="icon popup__title-icon" aria-hidden="true"><use href="#i-spark"></use></svg>Обсудим задачу вашего бренда</p>
         <form class="form" data-form="popup" novalidate>
           <label class="form__field form__field--wide">
             <span class="visually-hidden">Задача</span>
@@ -1128,7 +1128,7 @@
           </label>
           <label class="form__consent">
             <input class="form__checkbox" type="checkbox" name="consent" required>
-            <span>Я даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+            <span>Я даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="form__link" href="https://mediaseller.agency/privacy-policy" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
           </label>
           <button class="btn btn--lg form__submit" type="submit">Обсудить задачу<svg class="icon icon--stroke btn__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
         </form>
@@ -1140,8 +1140,8 @@
         <p class="popup__label">Или позвоните</p>
         <a class="popup__phone" href="tel:+79186285320">+7 918 628-53-20</a>
         <div class="popup__links">
-          <a class="footer__contact" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-          <a class="footer__contact" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+          <a class="social" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
+          <a class="social" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
         </div>
       </div>
     </div>

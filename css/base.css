@@ -143,11 +143,6 @@ button {
 }
 
 /* ============ Раскладка ============ */
-.container {
-  width: 100%;
-  padding-inline: var(--ms-gutter);
-}
-
 .sprite {
   position: absolute;
   width: 0;
