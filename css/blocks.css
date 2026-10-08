@@ -726,6 +726,15 @@
   color: var(--c-muted);
 }
 
+.case__note {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--c-faint);
+  border-top: 1px solid var(--c-line);
+}
+
 /* ============ Баннер направления ============ */
 .banner {
   position: relative;
@@ -937,6 +946,77 @@
   font-size: 1.04rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.bento--even {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.bento__main--media {
+  align-items: flex-end;
+  isolation: isolate;
+}
+
+.bento__main--media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(15, 17, 19, 0.92) 0%, rgba(15, 17, 19, 0.7) 55%, rgba(15, 17, 19, 0.35) 100%);
+}
+
+.bento__main--media .bento__body {
+  width: 24rem;
+  max-width: 100%;
+}
+
+.bento__main--media .bento__title {
+  font-size: 1.94rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.bento__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bento__link {
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+  transition: color var(--ms-speed) var(--ms-ease);
+}
+
+.bento__link:hover {
+  color: var(--ms-accent);
+}
+
+.bento__tag {
+  margin-top: auto;
+  padding-top: 1.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ms-accent);
+}
+
+.bento__tag + .bento__name {
+  margin-top: 0.4rem;
+  padding-top: 0;
+}
+
+.bento__desc {
+  margin-top: 0.5rem;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: var(--c-muted);
 }
 
 .bento__note {
@@ -1932,6 +2012,10 @@
     grid-column: auto;
   }
 
+  .bento--even .bento__side {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .photo {
     grid-template-columns: 5.2rem minmax(0, 1fr);
   }
@@ -2216,6 +2300,24 @@
     padding: 1.25rem;
   }
 
+  .bento__main--media {
+    justify-content: flex-end;
+    min-height: 24rem;
+    text-align: left;
+  }
+
+  .bento__main--media .bento__body {
+    align-items: flex-start;
+  }
+
+  .bento__main--media::after {
+    background: linear-gradient(0deg, rgba(15, 17, 19, 0.94) 30%, rgba(15, 17, 19, 0.45) 100%);
+  }
+
+  .bento__main--media .bento__title {
+    font-size: 1.6rem;
+  }
+
   .insight__title {
     gap: 0.8rem;
     font-size: 1.6rem;
@@ -2396,6 +2498,10 @@
 
   .bento__name {
     font-size: 0.94rem;
+  }
+
+  .bento--even .bento__side {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .popup__side {

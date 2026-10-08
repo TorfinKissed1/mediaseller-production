@@ -31,6 +31,10 @@
   <symbol id="i-eye" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 5c6.4 0 10 7 10 7s-3.6 7-10 7S2 12 2 12s3.6-7 10-7Zm0 10.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="m12 20.5-7.7-7.6a4.9 4.9 0 0 1 7-7l.7.8.7-.8a4.9 4.9 0 0 1 7 7L12 20.5Z"/></symbol>
   <symbol id="i-bag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8 7.5V7a4 4 0 0 1 8 0v.5h2.1a1 1 0 0 1 1 .9l.9 11a1 1 0 0 1-1 1.1H5a1 1 0 0 1-1-1.1l.9-11a1 1 0 0 1 1-.9H8Zm2 0h4V7a2 2 0 1 0-4 0v.5Z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 4.5A1.5 1.5 0 0 1 4.5 3h6.9a1.5 1.5 0 0 1 1.06.44l8.1 8.1a1.5 1.5 0 0 1 0 2.12l-6.9 6.9a1.5 1.5 0 0 1-2.12 0l-8.1-8.1A1.5 1.5 0 0 1 3 11.4V4.5Zm4.5 4.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 10V7.5a5 5 0 0 1 10 0V10h.5A1.5 1.5 0 0 1 19 11.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5v-8A1.5 1.5 0 0 1 6.5 10H7Zm2 0h6V7.5a3 3 0 0 0-6 0V10Z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.5 2.5h7.2a1.5 1.5 0 0 1 1.06.44l3.8 3.8A1.5 1.5 0 0 1 19 7.8V20a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 20V4a1.5 1.5 0 0 1 1.5-1.5ZM8 11h8v1.6H8V11Zm0 4h8v1.6H8V15Z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.6 2.2 4.9 13.1a.8.8 0 0 0 .63 1.3H11l-.9 7a.4.4 0 0 0 .7.3l8.7-10.9a.8.8 0 0 0-.63-1.3H13.4l.9-7a.4.4 0 0 0-.7-.3Z"/></symbol>
   <symbol id="i-laurel" viewBox="0 0 28 44">
     <path d="M24 42C10 36 4 22 9 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     <ellipse cx="5.2" cy="9.5" rx="2.1" ry="4.6" transform="rotate(-24 5.2 9.5)"/>
@@ -168,6 +172,124 @@
   <div class="showcase" data-showcase></div>
 </section>
 
+<!-- ============ AI-ролики в эфире ============ -->
+<section class="section" id="aired">
+  <div class="section__head">
+    <h2 class="section__title">AI-ролики, которые уже вышли в&nbsp;эфир</h2>
+    <div class="section__arrows">
+        <button class="arrow arrow--prev" type="button" data-slider-prev aria-label="Ролики в эфире: назад"><svg class="icon icon--stroke arrow__icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+        <button class="arrow" type="button" data-slider-next aria-label="Ролики в эфире: вперёд"><svg class="icon icon--stroke arrow__icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+      </div>
+    <p class="section__lead">Рекламные ролики для телевидения, сделанные нейросетями: без съёмочной площадки, актёров и&nbsp;студийной записи звука.</p>
+  </div>
+  <div class="slider" data-slider>
+    <ul class="slider__track">
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Наш Лецитин»" data-video="video/nash-lecitin.mp4" data-preview="video/preview/nash-lecitin.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Наш Лецитин»">
+              <img class="case__poster" src="img/cases/nash-lecitin.jpg" alt="«Наш Лецитин»: тв-ролик для бренда бадов" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+            </button>
+            <h3 class="case__title">«Наш Лецитин»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-ролик для бренда БАДов</p>
+            <p class="case__note">На входе — только фотографии продукта</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Сахалин»" data-video="video/sakhalin.mp4" data-preview="video/preview/sakhalin.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Сахалин»">
+              <img class="case__poster" src="img/cases/sakhalin.jpg" alt="«Сахалин»: тв-ролик для магазина морепродуктов" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Сахалин»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-ролик для магазина морепродуктов</p>
+            <p class="case__note">Задача — сообщить об открытии магазина в Краснодаре</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Ёлкин Матрас»" data-video="video/elkin-matras.mp4" data-preview="video/preview/elkin-matras.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Ёлкин Матрас»">
+              <img class="case__poster" src="img/cases/elkin-matras.jpg" alt="«Ёлкин Матрас»: тв-реклама" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Ёлкин Матрас»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Modern Clinic" data-video="video/modern-clinic.mp4" data-preview="video/preview/modern-clinic.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: Modern Clinic">
+              <img class="case__poster" src="img/cases/modern-clinic.jpg" alt="Modern Clinic: тв-реклама клиники" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">Modern Clinic</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама клиники</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Краснодарский ипподром" data-video="video/ippodrom.mp4" data-preview="video/preview/ippodrom.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский ипподром">
+              <img class="case__poster" src="img/cases/ippodrom.jpg" alt="Краснодарский ипподром: тв-реклама" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">Краснодарский ипподром</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Аквамир»" data-video="video/aquamir-23-february.mp4" data-preview="video/preview/aquamir-23-february.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
+              <img class="case__poster" src="img/cases/aquamir-23-february.jpg" alt="«Аквамир»: тв-реклама к 23 февраля" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Аквамир»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама к 23 февраля</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Аквамир»" data-video="video/aquamir-8-march.mp4" data-preview="video/preview/aquamir-8-march.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
+              <img class="case__poster" src="img/cases/aquamir-8-march.jpg" alt="«Аквамир»: тв-реклама к 8 марта" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Аквамир»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама к 8 Марта</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-1.mp4" data-preview="video/preview/tsvety-yuga-1.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
+              <img class="case__poster" src="img/cases/tsvety-yuga-1.jpg" alt="«Цветы Юга»: тв-реклама" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Цветы Юга»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-2.mp4" data-preview="video/preview/tsvety-yuga-2.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
+              <img class="case__poster" src="img/cases/tsvety-yuga-2.jpg" alt="«Цветы Юга»: тв-реклама, вторая версия" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">«Цветы Юга»</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама, вторая версия</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Краснодарский институт кооперации" data-video="video/institut-tv.mp4" data-preview="video/preview/institut-tv.mp4">
+            <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский институт кооперации">
+              <img class="case__poster" src="img/cases/institut-tv.jpg" alt="Краснодарский институт кооперации: тв-реклама" width="960" height="540" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+            </button>
+            <h3 class="case__title">Краснодарский институт кооперации</h3>
+            <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
+          </article>
+        </li>
+    </ul>
+  </div>
+</section>
+
 <!-- ============ Направление 1. AI-ролики ============ -->
 <section class="section" id="ai">
   <div class="section__head">
@@ -261,16 +383,6 @@
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="Краснодарский институт кооперации" data-video="video/institut-tv.mp4" data-preview="video/preview/institut-tv.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский институт кооперации">
-              <img class="case__poster" src="img/cases/institut-tv.jpg" alt="Краснодарский институт кооперации: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">Краснодарский институт кооперации</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама</p>
-          </article>
-        </li>
-        <li class="slider__slide">
           <article class="case" data-case data-kind="AI-ролик" data-title="«Квартира на море»" data-video="video/kvartira-na-more.mp4" data-preview="video/preview/kvartira-na-more.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Квартира на море»">
               <img class="case__poster" src="img/cases/kvartira-na-more.jpg" alt="«Квартира на море»: ролик для авито и циан, геленджик" width="960" height="540" loading="lazy">
@@ -288,96 +400,6 @@
             </button>
             <h3 class="case__title">Ортопедическая обувь</h3>
             <p class="case__text">AI-ролик · презентационный ролик модели</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Ёлкин Матрас»" data-video="video/elkin-matras.mp4" data-preview="video/preview/elkin-matras.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Ёлкин Матрас»">
-              <img class="case__poster" src="img/cases/elkin-matras.jpg" alt="«Ёлкин Матрас»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Ёлкин Матрас»</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Аквамир»" data-video="video/aquamir-23-february.mp4" data-preview="video/preview/aquamir-23-february.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
-              <img class="case__poster" src="img/cases/aquamir-23-february.jpg" alt="«Аквамир»: тв-реклама к 23 февраля" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Аквамир»</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама к 23 февраля</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Аквамир»" data-video="video/aquamir-8-march.mp4" data-preview="video/preview/aquamir-8-march.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
-              <img class="case__poster" src="img/cases/aquamir-8-march.jpg" alt="«Аквамир»: тв-реклама к 8 марта" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Аквамир»</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама к 8 Марта</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="Краснодарский ипподром" data-video="video/ippodrom.mp4" data-preview="video/preview/ippodrom.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский ипподром">
-              <img class="case__poster" src="img/cases/ippodrom.jpg" alt="Краснодарский ипподром: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">Краснодарский ипподром</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-1.mp4" data-preview="video/preview/tsvety-yuga-1.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
-              <img class="case__poster" src="img/cases/tsvety-yuga-1.jpg" alt="«Цветы Юга»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Цветы Юга»</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-2.mp4" data-preview="video/preview/tsvety-yuga-2.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
-              <img class="case__poster" src="img/cases/tsvety-yuga-2.jpg" alt="«Цветы Юга»: тв-реклама, вторая версия" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Цветы Юга»</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама, вторая версия</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Наш Лецитин»" data-video="video/nash-lecitin.mp4" data-preview="video/preview/nash-lecitin.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Наш Лецитин»">
-              <img class="case__poster" src="img/cases/nash-lecitin.jpg" alt="«Наш Лецитин»: тв-ролик для бренда бадов" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
-            </button>
-            <h3 class="case__title">«Наш Лецитин»</h3>
-            <p class="case__text">AI-ролик · ТВ-ролик для бренда БАДов</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="«Сахалин»" data-video="video/sakhalin.mp4" data-preview="video/preview/sakhalin.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Сахалин»">
-              <img class="case__poster" src="img/cases/sakhalin.jpg" alt="«Сахалин»: тв-ролик для магазина морепродуктов" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">«Сахалин»</h3>
-            <p class="case__text">AI-ролик · ТВ-ролик для магазина морепродуктов</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик" data-title="Modern Clinic" data-video="video/modern-clinic.mp4" data-preview="video/preview/modern-clinic.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: Modern Clinic">
-              <img class="case__poster" src="img/cases/modern-clinic.jpg" alt="Modern Clinic: тв-реклама клиники" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">Modern Clinic</h3>
-            <p class="case__text">AI-ролик · ТВ-реклама клиники</p>
           </article>
         </li>
     </ul>
@@ -749,6 +771,54 @@
     <div class="banner__media">
       <img class="banner__picture" src="img/renders/exterior-yard-day.jpg" alt="3D-визуализация двора жилого комплекса, вид сверху" width="1920" height="1072" loading="lazy">
     </div>
+  </div>
+</section>
+
+<!-- ============ Агентствам ============ -->
+<section class="section" id="agency">
+  <div class="section__head">
+    <h2 class="section__title">Агентствам</h2>
+  </div>
+  <div class="bento bento--even">
+    <div class="bento__main bento__main--media reveal">
+      <video class="bento__backdrop" muted loop playsinline preload="none" poster="img/cases/institut-film.jpg" data-autoplay>
+        <source src="video/preview/institut-film.mp4" type="video/mp4">
+      </video>
+      <div class="bento__body">
+        <h3 class="bento__title">Работаем субподрядом под вашим брендом</h3>
+        <p class="bento__text">Клиент видит вас, мы остаёмся за&nbsp;кадром&nbsp;— если так нужно. Берём AI-ролики, съёмку и&nbsp;3D-визуализацию под ваши проекты и&nbsp;тендеры.</p>
+        <div class="bento__actions">
+          <button class="btn btn--md bento__button" type="button" data-modal-open="request">Обсудить сотрудничество</button>
+          <a class="bento__link" href="#aired">Смотреть ролики в&nbsp;эфире</a>
+        </div>
+      </div>
+    </div>
+    <ul class="bento__side">
+      <li class="bento__card reveal">
+        <svg class="icon bento__icon" aria-hidden="true"><use href="#i-tag"></use></svg>
+        <p class="bento__tag">White label</p>
+        <h3 class="bento__name">Ваш бренд в&nbsp;титрах</h3>
+        <p class="bento__desc">Сдаём материалы без нашего логотипа и&nbsp;упоминаний. Кейс публикуем только с&nbsp;вашего согласия.</p>
+      </li>
+      <li class="bento__card reveal">
+        <svg class="icon bento__icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+        <p class="bento__tag">NDA</p>
+        <h3 class="bento__name">Подписываем до&nbsp;брифа</h3>
+        <p class="bento__desc">По&nbsp;нашей форме или по&nbsp;вашей.</p>
+      </li>
+      <li class="bento__card reveal">
+        <svg class="icon bento__icon" aria-hidden="true"><use href="#i-doc"></use></svg>
+        <p class="bento__tag">Договор</p>
+        <h3 class="bento__name">Юрлицо и&nbsp;закрывающие документы</h3>
+        <p class="bento__desc">Договор, счёт, акт. Права на&nbsp;ролик переходят заказчику после оплаты.</p>
+      </li>
+      <li class="bento__card reveal">
+        <svg class="icon bento__icon" aria-hidden="true"><use href="#i-bolt"></use></svg>
+        <p class="bento__tag">Темп</p>
+        <h3 class="bento__name">Питч к&nbsp;тендеру за&nbsp;3&nbsp;дня</h3>
+        <p class="bento__desc">Аниматик или превиз к&nbsp;дате защиты.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
