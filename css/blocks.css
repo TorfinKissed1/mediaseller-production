@@ -1191,24 +1191,10 @@
 }
 
 .photo__frame {
-  display: grid;
-  place-content: center;
-  gap: 0.6rem;
   aspect-ratio: 523 / 273;
-  justify-items: center;
-  padding: 1rem;
-  overflow: hidden;
-  font-size: 0.84rem;
-  text-align: center;
-  color: var(--c-faint);
   background: repeating-linear-gradient(135deg, #1a1c1f 0 0.75rem, #1e2023 0.75rem 1.5rem);
   border: 1px dashed var(--ms-steel);
   border-radius: var(--ms-radius-s);
-}
-
-.photo__icon {
-  width: 1.75rem;
-  height: 1.75rem;
 }
 
 .photo__picture {
