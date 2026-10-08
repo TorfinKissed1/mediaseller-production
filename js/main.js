@@ -9,6 +9,7 @@
 
   initMenu();
   initHeader();
+  initHeroVideo();
   initTyped();
   initMarquee();
   initSliders();
@@ -78,6 +79,9 @@
         return;
       }
       opener = trigger || document.activeElement;
+      if (opener && opener.closest && opener.closest('.menu')) {
+        opener = document.querySelector('[data-menu-open]');
+      }
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden', 'false');
       lockScroll();
@@ -100,7 +104,8 @@
     }
 
     modal.addEventListener('click', function (event) {
-      if (event.target === modal || event.target.closest('[data-modal-close]')) {
+      if (event.target === modal || event.target.classList.contains('modal__dialog') ||
+          event.target.closest('[data-modal-close]')) {
         close();
       }
     });
@@ -163,11 +168,25 @@
       trapFocus(menu, event);
     });
 
-    window.matchMedia('(min-width: 1025px)').addEventListener('change', function (query) {
+    var desktop = window.matchMedia('(min-width: 1025px)');
+    var onDesktop = function (query) {
       if (query.matches) {
         setOpen(false);
       }
-    });
+    };
+    if (desktop.addEventListener) {
+      desktop.addEventListener('change', onDesktop);
+    } else {
+      desktop.addListener(onDesktop);
+    }
+  }
+
+  function initHeroVideo() {
+    var video = document.querySelector('.hero__video');
+    if (video && reduceMotion) {
+      video.removeAttribute('autoplay');
+      video.pause();
+    }
   }
 
   function initHeader() {
@@ -396,7 +415,7 @@
       lastScroll = scroll;
 
       rows.forEach(function (row) {
-        row.offset += row.direction * (drift + scrolled * PARALLAX);
+        row.offset += row.direction * (drift + (reduceMotion ? 0 : scrolled * PARALLAX));
       });
       render();
       window.requestAnimationFrame(frame);
@@ -699,13 +718,8 @@
         });
       }
 
-      form.addEventListener('input', function (event) {
-        event.target.classList.remove('is-invalid');
-      });
-
-      form.addEventListener('change', function (event) {
-        event.target.classList.remove('is-invalid');
-      });
+      form.addEventListener('input', clearInvalid);
+      form.addEventListener('change', clearInvalid);
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -719,6 +733,7 @@
             isValid = field.value.trim().length > 1;
           }
           field.classList.toggle('is-invalid', !isValid);
+          field.setAttribute('aria-invalid', String(!isValid));
           return !isValid;
         });
 
@@ -730,12 +745,19 @@
       });
     });
 
+    function clearInvalid(event) {
+      event.target.classList.remove('is-invalid');
+      event.target.removeAttribute('aria-invalid');
+    }
+
     function showDone(form) {
       var done = document.createElement(form.classList.contains('callback__form') ? 'p' : 'div');
       if (form.classList.contains('callback__form')) {
         done.className = 'callback__done';
         done.textContent = 'Спасибо! Перезвоним в рабочее время.';
+        done.setAttribute('tabindex', '-1');
         form.parentNode.replaceChild(done, form);
+        done.focus({ preventScroll: true });
         return;
       }
       done.className = 'form__done';
@@ -776,10 +798,18 @@
       }
     });
 
+    function clearDelay(event) {
+      if (event.propertyName === 'opacity') {
+        event.target.style.transitionDelay = '';
+        event.target.removeEventListener('transitionend', clearDelay);
+      }
+    }
+
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
+          entry.target.addEventListener('transitionend', clearDelay);
           observer.unobserve(entry.target);
         }
       });

@@ -428,7 +428,6 @@
 
 .clients__track {
   display: flex;
-  gap: var(--ms-gap);
   width: max-content;
 }
 
@@ -443,6 +442,7 @@
 .clients__item {
   flex: none;
   width: 7.2rem;
+  margin-right: var(--ms-gap);
   aspect-ratio: 218 / 181;
   overflow: hidden;
   border-radius: var(--ms-radius-s);
@@ -607,10 +607,6 @@
 
 .slider--2 {
   --per: 2;
-}
-
-.slider--4 {
-  --per: 4;
 }
 
 .slider__track {
@@ -894,7 +890,7 @@
   right: 2.2rem;
   display: flex;
   gap: var(--ms-gap);
-  width: 33.5rem;
+  width: min(33.5rem, calc(100% - 25.5rem));
 }
 
 .bento__clip {
@@ -924,7 +920,7 @@
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   border-radius: var(--ms-radius-m);
-  transition: border-color var(--ms-speed) var(--ms-ease);
+  transition: border-color var(--ms-speed) var(--ms-ease), opacity 0.6s var(--ms-ease), transform 0.6s var(--ms-ease);
 }
 
 .bento__card:hover {
@@ -1158,6 +1154,12 @@
   padding-inline: var(--ms-gutter);
 }
 
+.insight__arrows {
+  display: flex;
+  flex: none;
+  gap: 0.4rem;
+}
+
 .insight__subtitle {
   font-size: 1.94rem;
   font-weight: 600;
@@ -1233,7 +1235,7 @@
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   border-radius: var(--ms-radius-m);
-  transition: border-color var(--ms-speed) var(--ms-ease);
+  transition: border-color var(--ms-speed) var(--ms-ease), opacity 0.6s var(--ms-ease), transform 0.6s var(--ms-ease);
 }
 
 .step:hover {
@@ -1358,11 +1360,14 @@
 .faq__answer {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows var(--ms-speed-slow) var(--ms-ease);
+  visibility: hidden;
+  transition: grid-template-rows var(--ms-speed-slow) var(--ms-ease), visibility 0s linear var(--ms-speed-slow);
 }
 
 .faq__item.is-open .faq__answer {
   grid-template-rows: 1fr;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .faq__inner {
@@ -1891,12 +1896,16 @@
   font-size: 0.94rem;
   font-weight: 600;
   box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.45);
+  visibility: hidden;
   transform: translate(-50%, 160%);
-  transition: transform var(--ms-speed-slow) var(--ms-ease), background-color var(--ms-speed) var(--ms-ease);
+  transition: transform var(--ms-speed-slow) var(--ms-ease), background-color var(--ms-speed) var(--ms-ease),
+    visibility 0s linear var(--ms-speed-slow);
 }
 
 .float-cta.is-visible {
+  visibility: visible;
   transform: translate(-50%, 0);
+  transition-delay: 0s;
 }
 
 /* ============ Без наведения: подписи видны сразу ============ */
@@ -1972,10 +1981,6 @@
 
   .slider--2 {
     --per: 1.6;
-  }
-
-  .slider--4 {
-    --per: 3.2;
   }
 
   .banner {
@@ -2185,10 +2190,6 @@
   .slider,
   .slider--2 {
     --per: 1.14;
-  }
-
-  .slider--4 {
-    --per: 1.7;
   }
 
   .case__title {
@@ -2549,6 +2550,10 @@
 
 /* ============ Меньше движения ============ */
 @media (prefers-reduced-motion: reduce) {
+  .clients {
+    overflow-x: auto;
+  }
+
   .clients__track.is-running {
     animation: none;
   }
