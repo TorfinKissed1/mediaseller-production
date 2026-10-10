@@ -12,7 +12,6 @@
   initHeroVideo();
   initMarquee();
   initSliders();
-  initTabs();
   initShowcase();
   initPreviews();
   initPlayer();
@@ -220,10 +219,8 @@
     toArray(document.querySelectorAll('[data-slider]')).forEach(function (slider) {
       var track = slider.querySelector('.slider__track');
       var scope = slider.closest('section') || slider.parentNode;
-      var name = slider.getAttribute('data-slider');
-      var match = name ? '="' + name + '"' : '';
-      var prev = scope.querySelector('[data-slider-prev' + match + ']');
-      var next = scope.querySelector('[data-slider-next' + match + ']');
+      var prev = scope.querySelector('[data-slider-prev]');
+      var next = scope.querySelector('[data-slider-next]');
       if (!track || !prev || !next) {
         return;
       }
@@ -264,41 +261,6 @@
       track.addEventListener('scroll', requestSync, { passive: true });
       window.addEventListener('resize', sync);
       sync();
-    });
-  }
-
-  function initTabs() {
-    toArray(document.querySelectorAll('[data-tabs]')).forEach(function (tabs) {
-      var scope = tabs.closest('section');
-      var buttons = toArray(tabs.querySelectorAll('[data-tab]'));
-      var panels = toArray(scope.querySelectorAll('[data-tab-panel]'));
-
-      function select(name) {
-        buttons.forEach(function (button) {
-          var isActive = button.getAttribute('data-tab') === name;
-          button.classList.toggle('is-active', isActive);
-          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
-        panels.forEach(function (panel) {
-          panel.hidden = panel.getAttribute('data-tab-panel') !== name;
-        });
-        // Стрелки слайдера считают доступность по ширине ряда, а у скрытого ряда она нулевая.
-        window.dispatchEvent(new Event('resize'));
-      }
-
-      tabs.addEventListener('click', function (event) {
-        var button = event.target.closest('[data-tab]');
-        if (button) {
-          select(button.getAttribute('data-tab'));
-        }
-      });
-
-      document.addEventListener('click', function (event) {
-        var link = event.target.closest('[data-tab-open]');
-        if (link && scope.id && link.getAttribute('href') === '#' + scope.id) {
-          select(link.getAttribute('data-tab-open'));
-        }
-      });
     });
   }
 
