@@ -490,6 +490,30 @@
   color: var(--c-muted);
 }
 
+/* ============ Пара роликов над лентой ============ */
+.spotlight {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ms-gap);
+  margin-bottom: 2.6rem;
+  padding-inline: var(--ms-gutter);
+}
+
+.spotlight__item .case__media {
+  border-radius: var(--ms-radius-m);
+}
+
+.spotlight__item .case__title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.spotlight__item .case__text {
+  margin-top: 0.3rem;
+  font-size: 0.94rem;
+}
+
 /* ============ Лента портфолио ============ */
 .showcase {
   display: grid;
@@ -589,6 +613,10 @@
 
 .slider--2 {
   --per: 2;
+}
+
+.slider--portrait {
+  --per: 5;
 }
 
 .slider__track {
@@ -1947,6 +1975,10 @@
 }
 
 @media (max-width: 1024px) {
+  .slider.slider--portrait {
+    --per: 3.4;
+  }
+
   .trust__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.6rem 1.5rem;
@@ -2080,6 +2112,20 @@
 }
 
 @media (max-width: 768px) {
+  .slider.slider--portrait {
+    --per: 2.3;
+  }
+
+  .spotlight {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .spotlight__item .case__title {
+    font-size: 1.19rem;
+  }
+
   .trust__value {
     font-size: 1.9rem;
   }
