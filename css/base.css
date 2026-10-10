@@ -4,13 +4,13 @@
   --ms-font-display: 'Unbounded', var(--ms-font);
   --ms-font-serif: Georgia, 'Times New Roman', serif;
 
-  --ms-black: #0f1113;
-  --ms-ink: #101113;
-  --ms-graphite: #222427;
-  --ms-steel: #3a3a3a;
+  --ms-black: #080d18;
+  --ms-ink: #0b1220;
+  --ms-graphite: #111a2c;
+  --ms-steel: #25324d;
   --ms-white: #ffffff;
-  --ms-paper: #f2f2f0;
-  --ms-accent: #ffe835;
+  --ms-paper: #f4f1ea;
+  --ms-accent: #c9a45c;
 
   --ms-gutter: 1.5rem;
   --ms-gap: 0.75rem;
@@ -41,21 +41,21 @@
   --c-line: var(--ms-steel);
   --c-btn: var(--ms-white);
   --c-btn-text: var(--ms-ink);
-  --c-btn-hover: #dcdcdc;
+  --c-btn-hover: #e9e2d2;
   --c-field: rgba(255, 255, 255, 0.06);
 }
 
 .theme--light {
   --c-bg: var(--ms-paper);
   --c-text: var(--ms-ink);
-  --c-muted: rgba(16, 17, 19, 0.64);
-  --c-faint: rgba(16, 17, 19, 0.4);
+  --c-muted: rgba(11, 18, 32, 0.64);
+  --c-faint: rgba(11, 18, 32, 0.4);
   --c-surface: var(--ms-white);
-  --c-line: rgba(16, 17, 19, 0.12);
+  --c-line: rgba(11, 18, 32, 0.12);
   --c-btn: var(--ms-ink);
   --c-btn-text: var(--ms-white);
-  --c-btn-hover: #33363b;
-  --c-field: rgba(16, 17, 19, 0.05);
+  --c-btn-hover: #1c2a47;
+  --c-field: rgba(11, 18, 32, 0.05);
 }
 
 .theme--dark,

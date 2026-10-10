@@ -48,7 +48,7 @@
 }
 
 .btn--dark:hover {
-  background: #2c2f33;
+  background: #1a2540;
 }
 
 .btn--ghost {
@@ -336,9 +336,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, var(--ms-black) 3%, rgba(15, 17, 19, 0) 44%),
-    linear-gradient(90deg, rgba(15, 17, 19, 0.78) 0%, rgba(15, 17, 19, 0.3) 62%, rgba(15, 17, 19, 0.12) 100%),
-    linear-gradient(180deg, rgba(15, 17, 19, 0.6) 0%, rgba(15, 17, 19, 0) 24%);
+  background: linear-gradient(0deg, var(--ms-black) 3%, rgba(8, 13, 24, 0) 44%),
+    linear-gradient(90deg, rgba(8, 13, 24, 0.78) 0%, rgba(8, 13, 24, 0.3) 62%, rgba(8, 13, 24, 0.12) 100%),
+    linear-gradient(180deg, rgba(8, 13, 24, 0.6) 0%, rgba(8, 13, 24, 0) 24%);
 }
 
 .hero__body {
@@ -812,7 +812,7 @@
   inset: 0 auto 0 0;
   z-index: 1;
   width: 34%;
-  background: linear-gradient(90deg, var(--c-bg), rgba(242, 242, 240, 0));
+  background: linear-gradient(90deg, var(--c-bg), rgba(244, 241, 234, 0));
   pointer-events: none;
 }
 
@@ -958,7 +958,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(15, 17, 19, 0.92) 0%, rgba(15, 17, 19, 0.7) 55%, rgba(15, 17, 19, 0.35) 100%);
+  background: linear-gradient(90deg, rgba(8, 13, 24, 0.92) 0%, rgba(8, 13, 24, 0.7) 55%, rgba(8, 13, 24, 0.35) 100%);
 }
 
 .bento__main--media .bento__body {
@@ -1194,7 +1194,7 @@
 
 .photo__frame {
   aspect-ratio: 523 / 273;
-  background: repeating-linear-gradient(135deg, #1a1c1f 0 0.75rem, #1e2023 0.75rem 1.5rem);
+  background: repeating-linear-gradient(135deg, #0f1728 0 0.75rem, #131d32 0.75rem 1.5rem);
   border: 1px dashed var(--ms-steel);
   border-radius: var(--ms-radius-s);
 }
@@ -1577,7 +1577,7 @@
 /* ============ Подвал ============ */
 .footer {
   color: rgba(255, 255, 255, 0.62);
-  background: #0a0a0a;
+  background: #050912;
 }
 
 .footer__top {
@@ -1585,7 +1585,7 @@
   align-items: center;
   gap: 3rem;
   padding: 2.2rem var(--ms-gutter);
-  border-bottom: 1px solid #1f2123;
+  border-bottom: 1px solid #172138;
 }
 
 .footer__shout {
@@ -1678,7 +1678,7 @@
   padding: 1.5rem var(--ms-gutter) 2rem;
   font-size: 0.78rem;
   line-height: 1.5;
-  border-top: 1px solid #1f2123;
+  border-top: 1px solid #172138;
 }
 
 .footer__legal {
@@ -1699,7 +1699,7 @@
   place-items: center;
   padding: 3.5rem 1.5rem 1.5rem;
   overflow-y: auto;
-  background: rgba(8, 9, 10, 0.84);
+  background: rgba(5, 9, 18, 0.84);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   opacity: 0;
@@ -1816,7 +1816,7 @@
   max-width: 60rem;
   margin-inline: auto;
   padding: 2.2rem;
-  background: #17191c;
+  background: #0e1627;
   border: 1px solid var(--ms-steel);
   border-radius: var(--ms-radius-l);
 }
@@ -1943,7 +1943,7 @@
   }
 
   .header--stuck {
-    background: rgba(15, 17, 19, 0.86);
+    background: rgba(8, 13, 24, 0.86);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
   }
@@ -2076,7 +2076,7 @@
   }
 
   .hero__media::after {
-    background: linear-gradient(0deg, var(--ms-black) 8%, rgba(15, 17, 19, 0.55) 55%, rgba(15, 17, 19, 0.45) 100%);
+    background: linear-gradient(0deg, var(--ms-black) 8%, rgba(8, 13, 24, 0.55) 55%, rgba(8, 13, 24, 0.45) 100%);
   }
 
   .hero__body {
@@ -2210,7 +2210,7 @@
     inset: auto 0 0;
     width: 100%;
     height: 45%;
-    background: linear-gradient(0deg, var(--c-bg), rgba(242, 242, 240, 0));
+    background: linear-gradient(0deg, var(--c-bg), rgba(244, 241, 234, 0));
   }
 
   .banner__body {
@@ -2298,7 +2298,7 @@
   }
 
   .bento__main--media::after {
-    background: linear-gradient(0deg, rgba(15, 17, 19, 0.94) 30%, rgba(15, 17, 19, 0.45) 100%);
+    background: linear-gradient(0deg, rgba(8, 13, 24, 0.94) 30%, rgba(8, 13, 24, 0.45) 100%);
   }
 
   .bento__main--media .bento__title {
