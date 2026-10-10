@@ -490,22 +490,6 @@
   color: var(--c-muted);
 }
 
-/* ============ Избранные работы ============ */
-.featured {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2rem var(--ms-gap);
-  padding-inline: var(--ms-gutter);
-}
-
-.featured__item {
-  grid-column: span 4;
-}
-
-.featured__item:nth-child(-n + 2) {
-  grid-column: span 6;
-}
-
 /* ============ Лента портфолио ============ */
 .showcase {
   display: grid;
@@ -607,10 +591,6 @@
   --per: 2;
 }
 
-.slider--portrait {
-  --per: 5;
-}
-
 .slider__track {
   display: flex;
   gap: var(--ms-gap);
@@ -710,6 +690,15 @@
   display: none;
 }
 
+.case__note {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--c-faint);
+  border-top: 1px solid var(--c-line);
+}
+
 .case__title {
   margin-top: 0.7rem;
   font-size: 1.04rem;
@@ -722,30 +711,6 @@
   font-size: 0.84rem;
   line-height: 1.35;
   color: var(--c-muted);
-}
-
-.case__facts {
-  margin-top: 0.8rem;
-  border-top: 1px solid var(--c-line);
-}
-
-.case__fact {
-  display: grid;
-  grid-template-columns: 9.5rem minmax(0, 1fr);
-  gap: 0.2rem 0.8rem;
-  padding: 0.55rem 0;
-  font-size: 0.84rem;
-  line-height: 1.35;
-  border-bottom: 1px solid var(--c-line);
-}
-
-.case__fact-name,
-.case__draft {
-  color: var(--c-faint);
-}
-
-.case__fact-value {
-  margin: 0;
 }
 
 /* ============ Баннер направления ============ */
@@ -875,49 +840,25 @@
 }
 
 .funnel__step:not(:last-child)::after {
-  content: '→';
+  content: '';
   position: absolute;
   top: 50%;
-  right: calc(var(--ms-gap) / -2 - 0.75rem);
+  left: calc(100% + 1px + var(--ms-gap) / 2);
   z-index: 1;
-  display: grid;
-  place-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--ms-ink);
-  background: var(--ms-accent);
+  background: var(--ms-accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b1220' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 0.8rem no-repeat;
   border-radius: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .funnel__frame {
-  display: flex;
   flex: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
   width: 5.6rem;
   aspect-ratio: 9 / 16;
-  color: var(--c-faint);
   background: repeating-linear-gradient(135deg, #0f1728 0 0.75rem, #131d32 0.75rem 1.5rem);
   border: 1px dashed var(--ms-steel);
   border-radius: var(--ms-radius-s);
-}
-
-.funnel__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.funnel__frame-label {
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 .funnel__body {
@@ -1334,27 +1275,8 @@
 
 .step__text {
   margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
   font-size: 0.9rem;
   color: var(--c-muted);
-}
-
-.step__result {
-  margin-top: auto;
-  padding-top: 0.9rem;
-  font-size: 0.94rem;
-  font-weight: 600;
-  line-height: 1.3;
-  border-top: 1px solid var(--c-line);
-}
-
-.step__result-name {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--c-faint);
 }
 
 /* ============ Вопросы и ответы ============ */
@@ -2030,14 +1952,6 @@
     gap: 1.6rem 1.5rem;
   }
 
-  .featured__item:nth-child(n) {
-    grid-column: span 6;
-  }
-
-  .slider--portrait {
-    --per: 3.4;
-  }
-
   .funnel__steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2168,10 +2082,6 @@
 @media (max-width: 768px) {
   .trust__value {
     font-size: 1.9rem;
-  }
-
-  .slider--portrait {
-    --per: 2.3;
   }
 
   .section--panel {
@@ -2511,19 +2421,7 @@
     font-size: 0.84rem;
   }
 
-  .featured {
-    gap: 1.5rem var(--ms-gap);
-  }
-
-  .featured__item:nth-child(n) {
-    grid-column: 1 / -1;
-  }
-
   .funnel__steps {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .case__fact {
     grid-template-columns: minmax(0, 1fr);
   }
 

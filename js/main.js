@@ -285,8 +285,12 @@
       rows.push({ element: element, direction: index % 2 ? -1 : 1, offset: 0, period: 0, sources: [] });
     }
 
+    var position = 0;
     cases.forEach(function (source, sourceIndex) {
-      rows[sourceIndex % ROWS].sources.push(sourceIndex);
+      if (showcase.contains(source)) {
+        rows[position % ROWS].sources.push(sourceIndex);
+        position += 1;
+      }
     });
 
     rows.forEach(function (row) {
