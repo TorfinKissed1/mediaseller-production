@@ -10,9 +10,9 @@
   initMenu();
   initHeader();
   initHeroVideo();
-  initTyped();
   initMarquee();
   initSliders();
+  initTabs();
   initShowcase();
   initPreviews();
   initPlayer();
@@ -203,55 +203,6 @@
     sync();
   }
 
-  function initTyped() {
-    var target = document.querySelector('[data-typed]');
-    if (!target) {
-      return;
-    }
-    var phrases = target.getAttribute('data-typed').split('|');
-    if (phrases.length < 2) {
-      return;
-    }
-    var phraseIndex = 0;
-    var length = phrases[0].length;
-    var erasing = true;
-
-    if (reduceMotion) {
-      window.setInterval(function () {
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        target.textContent = phrases[phraseIndex];
-      }, 4000);
-      return;
-    }
-
-    function tick() {
-      var phrase = phrases[phraseIndex];
-      var delay = erasing ? 22 : 46;
-
-      if (erasing) {
-        length -= 1;
-        if (length <= 0) {
-          length = 0;
-          erasing = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          delay = 320;
-        }
-      } else {
-        length += 1;
-        if (length >= phrase.length) {
-          length = phrase.length;
-          erasing = true;
-          delay = 2200;
-        }
-      }
-
-      target.textContent = phrases[phraseIndex].slice(0, length);
-      window.setTimeout(tick, delay);
-    }
-
-    window.setTimeout(tick, 2200);
-  }
-
   function initMarquee() {
     var track = document.querySelector('[data-marquee]');
     if (!track || reduceMotion) {
@@ -269,8 +220,10 @@
     toArray(document.querySelectorAll('[data-slider]')).forEach(function (slider) {
       var track = slider.querySelector('.slider__track');
       var scope = slider.closest('section') || slider.parentNode;
-      var prev = scope.querySelector('[data-slider-prev]');
-      var next = scope.querySelector('[data-slider-next]');
+      var name = slider.getAttribute('data-slider');
+      var match = name ? '="' + name + '"' : '';
+      var prev = scope.querySelector('[data-slider-prev' + match + ']');
+      var next = scope.querySelector('[data-slider-next' + match + ']');
       if (!track || !prev || !next) {
         return;
       }
@@ -309,8 +262,43 @@
       });
 
       track.addEventListener('scroll', requestSync, { passive: true });
-      window.addEventListener('resize', requestSync);
+      window.addEventListener('resize', sync);
       sync();
+    });
+  }
+
+  function initTabs() {
+    toArray(document.querySelectorAll('[data-tabs]')).forEach(function (tabs) {
+      var scope = tabs.closest('section');
+      var buttons = toArray(tabs.querySelectorAll('[data-tab]'));
+      var panels = toArray(scope.querySelectorAll('[data-tab-panel]'));
+
+      function select(name) {
+        buttons.forEach(function (button) {
+          var isActive = button.getAttribute('data-tab') === name;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        panels.forEach(function (panel) {
+          panel.hidden = panel.getAttribute('data-tab-panel') !== name;
+        });
+        // Стрелки слайдера считают доступность по ширине ряда, а у скрытого ряда она нулевая.
+        window.dispatchEvent(new Event('resize'));
+      }
+
+      tabs.addEventListener('click', function (event) {
+        var button = event.target.closest('[data-tab]');
+        if (button) {
+          select(button.getAttribute('data-tab'));
+        }
+      });
+
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('[data-tab-open]');
+        if (link && scope.id && link.getAttribute('href') === '#' + scope.id) {
+          select(link.getAttribute('data-tab-open'));
+        }
+      });
     });
   }
 
@@ -598,7 +586,10 @@
 
     document.addEventListener('click', function (event) {
       var clone = event.target.closest('.showcase__item');
-      var media = event.target.closest('.case__media');
+      var opener = event.target.closest('[data-case-open]');
+      var media = opener
+        ? document.getElementById(opener.getAttribute('data-case-open')).querySelector('.case__media')
+        : event.target.closest('.case__media');
       if (clone) {
         list = cases;
         show(Number(clone.getAttribute('data-ref')));
@@ -612,7 +603,7 @@
       var scope = item.closest('section') || document;
       list = toArray(scope.querySelectorAll('[data-case]'));
       show(list.indexOf(item));
-      modal.open(media);
+      modal.open(opener || media);
     });
 
     modalElement.querySelector('[data-player-prev]').addEventListener('click', function () {
@@ -751,15 +742,7 @@
     }
 
     function showDone(form) {
-      var done = document.createElement(form.classList.contains('callback__form') ? 'p' : 'div');
-      if (form.classList.contains('callback__form')) {
-        done.className = 'callback__done';
-        done.textContent = 'Спасибо! Перезвоним в рабочее время.';
-        done.setAttribute('tabindex', '-1');
-        form.parentNode.replaceChild(done, form);
-        done.focus({ preventScroll: true });
-        return;
-      }
+      var done = document.createElement('div');
       done.className = 'form__done';
       var title = document.createElement('p');
       title.className = 'form__done-title';

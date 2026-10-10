@@ -15,7 +15,7 @@
   --ms-gutter: 1.5rem;
   --ms-gap: 0.75rem;
   --ms-inset: 4.44rem;
-  --ms-section: 4.8rem;
+  --ms-section: 6.4rem;
 
   --ms-radius-xs: 0.375rem;
   --ms-radius-s: 0.75rem;
@@ -211,7 +211,7 @@ button {
 
   :root {
     --ms-inset: 1.5rem;
-    --ms-section: 4.5rem;
+    --ms-section: 5.5rem;
   }
 }
 
@@ -219,7 +219,7 @@ button {
   :root {
     --ms-gutter: 0.75rem;
     --ms-inset: 0.75rem;
-    --ms-section: 4rem;
+    --ms-section: 4.5rem;
     --ms-radius-l: 1.5rem;
     --ms-header: 3.5rem;
   }
