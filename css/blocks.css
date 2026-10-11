@@ -953,48 +953,137 @@
 }
 
 /* ============ Агентствам ============ */
-.partner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem 2.5rem;
-  margin-inline: var(--ms-gutter);
-  padding: 1.75rem 2rem;
-  background: var(--c-surface);
-  border: 1px solid var(--c-line);
-  border-radius: var(--ms-radius-l);
+.bento {
+  display: grid;
+  grid-template-columns: minmax(0, 2.28fr) minmax(0, 1fr);
+  gap: var(--ms-gap);
+  padding-inline: var(--ms-gutter);
 }
 
-.partner__title {
+.bento__main {
+  position: relative;
+  display: flex;
+  min-height: 15rem;
+  padding: 1.9rem 2rem;
+  overflow: hidden;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--ms-radius-m);
+}
+
+.bento__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 19rem;
+}
+
+.bento__title {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
+}
+
+.bento__text {
+  margin-top: 1rem;
+  font-size: 0.94rem;
+  color: var(--c-muted);
+}
+
+.bento__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  margin-top: auto;
+  padding-top: 1.4rem;
+}
+
+.bento__side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ms-gap);
+}
+
+.bento__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 7.1rem;
+  padding: 1.2rem 1.3rem;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--ms-radius-m);
+  transition: border-color var(--ms-speed) var(--ms-ease), opacity 0.6s var(--ms-ease), transform 0.6s var(--ms-ease);
+}
+
+.bento__card:hover {
+  border-color: var(--c-faint);
+}
+
+.bento__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.bento__name {
+  margin-top: auto;
+  padding-top: 1.8rem;
+  font-size: 1.04rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.bento--even {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.bento__main--media {
+  align-items: flex-end;
+  isolation: isolate;
+}
+
+.bento__main--media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(8, 13, 24, 0.92) 0%, rgba(8, 13, 24, 0.7) 55%, rgba(8, 13, 24, 0.35) 100%);
+}
+
+.bento__main--media .bento__body {
+  width: 24rem;
+  max-width: 100%;
+}
+
+.bento__main--media .bento__title {
+  font-size: 1.94rem;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-.partner__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1rem;
+.bento__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.partner__item {
-  padding: 0.4rem 0.9rem;
-  font-size: 0.84rem;
-  color: var(--c-muted);
-  border: 1px solid var(--c-line);
-  border-radius: var(--ms-radius-pill);
+.bento__tag {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ms-accent);
 }
 
-.partner__item:first-child {
-  color: var(--ms-ink);
-  background: var(--ms-accent);
-  border-color: var(--ms-accent);
-}
-
-.partner__button {
-  flex: none;
+.bento__tag + .bento__name {
+  margin-top: 0.4rem;
+  padding-top: 0;
 }
 
 /* ============ Мировая насмотренность ============ */
@@ -1802,6 +1891,18 @@
 }
 
 @media (max-width: 1024px) {
+  .bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bento__side {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .bento--even .bento__side {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .hero {
     min-height: 40rem;
   }
@@ -1812,11 +1913,6 @@
 
   .products {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .partner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .slider.slider--portrait {
@@ -1906,6 +2002,56 @@
 }
 
 @media (max-width: 768px) {
+  .bento__main {
+    flex-direction: column;
+    min-height: 0;
+    padding: 1.6rem 1.25rem 1.25rem;
+    text-align: center;
+  }
+
+  .bento__body {
+    align-items: center;
+    width: 100%;
+  }
+
+  .bento__actions {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    padding-top: 1.5rem;
+  }
+
+  .bento__button {
+    width: 100%;
+  }
+
+  .bento__side {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento__card {
+    min-height: 6.4rem;
+    padding: 1rem;
+  }
+
+  .bento__main--media {
+    justify-content: flex-end;
+    min-height: 14rem;
+    text-align: left;
+  }
+
+  .bento__main--media .bento__body {
+    align-items: flex-start;
+  }
+
+  .bento__main--media::after {
+    background: linear-gradient(0deg, rgba(8, 13, 24, 0.94) 30%, rgba(8, 13, 24, 0.45) 100%);
+  }
+
+  .bento__main--media .bento__title {
+    font-size: 1.6rem;
+  }
+
   .hero {
     min-height: 36rem;
     padding-top: calc(var(--ms-header) + 2rem);
@@ -1970,18 +2116,6 @@
   .product__list {
     grid-template-columns: minmax(0, 1fr);
     margin: 1rem 0 1.4rem;
-  }
-
-  .partner {
-    padding: 1.25rem;
-  }
-
-  .partner__title {
-    font-size: 1.19rem;
-  }
-
-  .partner__button {
-    width: 100%;
   }
 
   .steps {
@@ -2213,6 +2347,11 @@
 }
 
 @media (max-width: 480px) {
+  .bento__name {
+    font-size: 0.94rem;
+  }
+
+
   .trust__value {
     font-size: 1.5rem;
     white-space: normal;
@@ -2264,6 +2403,10 @@
 }
 
 @media (max-width: 340px) {
+  .bento__card {
+    padding: 1rem;
+  }
+
   .hero__title {
     font-size: 1.55rem;
   }
