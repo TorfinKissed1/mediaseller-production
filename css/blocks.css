@@ -2160,6 +2160,7 @@
 
   .step__number {
     grid-row: span 2;
+    align-self: center;
     font-size: 1.6rem;
     line-height: 1.2;
   }
@@ -2263,15 +2264,6 @@
 
   .photo__body {
     margin-left: -0.6rem;
-  }
-
-  .step__number {
-    font-size: 2.8rem;
-  }
-
-  .step__title {
-    margin-top: 2.2rem;
-    font-size: 1.06rem;
   }
 
   .faq__question {
@@ -2391,10 +2383,6 @@
 
   .showcase__item {
     height: 7.2rem;
-  }
-
-  .step__title {
-    margin-top: 1.4rem;
   }
 
   .insight__title {
