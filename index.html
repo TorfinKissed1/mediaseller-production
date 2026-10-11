@@ -173,12 +173,16 @@
     <h2 class="section__title">AI-видеопродакшн</h2>
   </div>
   <div class="products">
-    <article class="product reveal">
-      <div class="product__media">
-        <video class="product__video" muted loop playsinline preload="none" poster="img/cases/odevi.jpg" data-autoplay>
-          <source src="video/odevi.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="product reveal">
+      <article class="case case--bare" data-case data-kind="AI-ролик" data-title="Protec Fire" data-video="video/protec-fire.mp4" data-preview="video/preview/protec-fire.mp4">
+        <button class="case__media" type="button" aria-label="Смотреть ролик: Protec Fire">
+          <img class="case__poster" src="img/cases/protec-fire.jpg" alt="Protec Fire: имиджевый ролик о системах пожаротушения" width="960" height="540" loading="lazy">
+          <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>2:05</span>
+          <span class="product__credit">Protec Fire</span>
+        </button>
+        <h3 class="case__title">Protec Fire</h3>
+        <p class="case__text">AI-ролик · имиджевый ролик о системах пожаротушения</p>
+      </article>
       <div class="product__body">
         <p class="product__kicker">Один ролик под задачу</p>
         <h3 class="product__title">Creative Campaign</h3>
@@ -190,17 +194,17 @@
         </ul>
         <button class="btn btn--md product__button" type="button" data-modal-open="request">Обсудить ролик</button>
       </div>
-    </article>
-    <article class="product reveal">
-      <div class="product__media product__media--series">
-        <ol class="product__series">
-          <li class="product__stage"><span class="product__frame" aria-hidden="true"></span>Знакомство с&nbsp;брендом</li>
-          <li class="product__stage"><span class="product__frame" aria-hidden="true"></span>Интерес к&nbsp;продукту</li>
-          <li class="product__stage"><span class="product__frame" aria-hidden="true"></span>Ответы на&nbsp;сомнения</li>
-          <li class="product__stage"><span class="product__frame" aria-hidden="true"></span>Заявка или покупка</li>
-        </ol>
-        <p class="product__note">Пример структуры серии&nbsp;— состав подбираем под вашу задачу</p>
-      </div>
+    </div>
+    <div class="product reveal">
+      <article class="case case--bare" data-case data-kind="AI-ролик" data-title="DIM Coffee" data-video="video/dim-coffee.mp4" data-preview="video/preview/dim-coffee.mp4">
+        <button class="case__media" type="button" aria-label="Смотреть ролик: DIM Coffee">
+          <img class="case__poster" src="img/cases/dim-coffee.jpg" alt="DIM Coffee: рекламный ролик акции с розыгрышем поездки" width="960" height="540" loading="lazy">
+          <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+          <span class="product__credit">DIM Coffee</span>
+        </button>
+        <h3 class="case__title">DIM Coffee</h3>
+        <p class="case__text">AI-ролик · рекламный ролик акции с розыгрышем поездки</p>
+      </article>
       <div class="product__body">
         <p class="product__kicker">Серия роликов под воронку продаж</p>
         <h3 class="product__title">Creative Production</h3>
@@ -212,30 +216,8 @@
         </ul>
         <button class="btn btn--md product__button" type="button" data-modal-open="request">Обсудить серию</button>
       </div>
-    </article>
+    </div>
   </div>
-  <ul class="spotlight">
-    <li class="spotlight__item reveal">
-      <article class="case" data-case data-kind="AI-ролик" data-title="Protec Fire" data-video="video/protec-fire.mp4" data-preview="video/preview/protec-fire.mp4">
-        <button class="case__media" type="button" aria-label="Смотреть ролик: Protec Fire">
-          <img class="case__poster" src="img/cases/protec-fire.jpg" alt="Protec Fire: имиджевый ролик о системах пожаротушения" width="960" height="540" loading="lazy">
-          <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>2:05</span>
-        </button>
-        <h3 class="case__title">Protec Fire</h3>
-        <p class="case__text">AI-ролик · имиджевый ролик о системах пожаротушения</p>
-      </article>
-    </li>
-    <li class="spotlight__item reveal">
-      <article class="case" data-case data-kind="AI-ролик" data-title="DIM Coffee" data-video="video/dim-coffee.mp4" data-preview="video/preview/dim-coffee.mp4">
-        <button class="case__media" type="button" aria-label="Смотреть ролик: DIM Coffee">
-          <img class="case__poster" src="img/cases/dim-coffee.jpg" alt="DIM Coffee: рекламный ролик акции с розыгрышем поездки" width="960" height="540" loading="lazy">
-          <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
-        </button>
-        <h3 class="case__title">DIM Coffee</h3>
-        <p class="case__text">AI-ролик · рекламный ролик акции с розыгрышем поездки</p>
-      </article>
-    </li>
-  </ul>
   <div class="showcase" data-showcase>
     <ul class="showcase__source" data-showcase-source hidden>
       <li>
@@ -359,6 +341,18 @@
         </article>
       </li>
     </ul>
+  </div>
+  <div class="series reveal">
+    <div class="series__head">
+      <p class="series__kicker">Серия под воронку</p>
+      <p class="series__note">Пример структуры серии&nbsp;— состав подбираем под вашу задачу</p>
+    </div>
+    <ol class="series__list">
+      <li class="series__stage"><span class="series__frame" aria-hidden="true"></span>Знакомство с&nbsp;брендом</li>
+      <li class="series__stage"><span class="series__frame" aria-hidden="true"></span>Интерес к&nbsp;продукту</li>
+      <li class="series__stage"><span class="series__frame" aria-hidden="true"></span>Ответы на&nbsp;сомнения</li>
+      <li class="series__stage"><span class="series__frame" aria-hidden="true"></span>Заявка или покупка</li>
+    </ol>
   </div>
 </section>
 
