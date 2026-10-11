@@ -459,6 +459,15 @@
   letter-spacing: -0.02em;
 }
 
+.section__mark {
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-right: 0.4em;
+  vertical-align: 0.02em;
+  color: var(--ms-accent);
+}
+
 .section__arrows {
   display: flex;
   flex: none;
