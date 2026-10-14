@@ -25,7 +25,7 @@
   <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 8.3 7.7-5.6a.7.7 0 0 0-.8-1.1L12 11.5 5.1 6.6a.7.7 0 0 0-.8 1.1l7.7 5.6Z"/></symbol>
-  <symbol id="i-telegram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.4 3.3 2.7 10.5c-.9.4-.9 1.2 0 1.5l4.7 1.5 1.8 5.7c.2.6.9.8 1.4.4l2.7-2.3 4.7 3.5c.6.4 1.4.1 1.5-.6L22.7 4.5c.2-1-.5-1.6-1.3-1.2ZM9.4 14.2l8.3-5.3c.3-.2.6.2.3.4l-6.8 6.3-.3 3-1.5-4.4Z"/></symbol>
+  <symbol id="i-max" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 0 0-8.3 14.1l-1.1 3.6a.8.8 0 0 0 1 1l3.6-1.1A9.5 9.5 0 1 0 12 2.5Zm-4 13.2V8.4h1.6l2.4 3.4 2.4-3.4H16v7.3h-1.7v-4.5L12 14.4l-2.3-3.2v4.5H8Z" clip-rule="evenodd"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.7 2.5h2.6a1 1 0 0 1 1 .7l1.1 3.5a1 1 0 0 1-.3 1.1L9.2 9.3a12.3 12.3 0 0 0 5.5 5.5l1.5-1.9a1 1 0 0 1 1.1-.3l3.5 1.1a1 1 0 0 1 .7 1v2.6a2.2 2.2 0 0 1-2.4 2.2C10.8 18.9 5.1 13.2 4.5 4.9a2.2 2.2 0 0 1 2.2-2.4Z"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 4.5A1.5 1.5 0 0 1 4.5 3h6.9a1.5 1.5 0 0 1 1.06.44l8.1 8.1a1.5 1.5 0 0 1 0 2.12l-6.9 6.9a1.5 1.5 0 0 1-2.12 0l-8.1-8.1A1.5 1.5 0 0 1 3 11.4V4.5Zm4.5 4.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 10V7.5a5 5 0 0 1 10 0V10h.5A1.5 1.5 0 0 1 19 11.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5v-8A1.5 1.5 0 0 1 6.5 10H7Zm2 0h6V7.5a3 3 0 0 0-6 0V10Z"/></symbol>
@@ -66,7 +66,7 @@
     <div class="header__actions">
       <button class="btn" type="button" data-modal-open="request">Обсудить задачу</button>
       <a class="social social--plain header__contact" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-      <a class="social social--plain header__contact" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+      <a class="social social--plain header__contact" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…" aria-label="Написать в MAX"><svg class="icon" aria-hidden="true"><use href="#i-max"></use></svg></a>
       <a class="social social--plain header__contact" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
     </div>
     <button class="header__burger" type="button" data-menu-open aria-controls="menu" aria-expanded="false">Меню</button>
@@ -134,8 +134,8 @@
       <p class="trust__label">сданных видеороликов</p>
     </li>
     <li class="trust__item reveal">
-      <p class="trust__value">Полный цикл</p>
-      <p class="trust__label">производство и&nbsp;размещение рекламы</p>
+      <p class="trust__value trust__value--text">Полный цикл</p>
+      <p class="trust__label">производство и&nbsp;размещение</p>
     </li>
   </ul>
 </section>
@@ -219,9 +219,9 @@
         </div>
       </div>
     </div>
-    <div class="series reveal">
+    <div class="series series--accent reveal">
       <div class="series__head">
-        <p class="series__kicker">Серия под воронку</p>
+        <p class="series__kicker">Creative Production&nbsp;· серия под воронку</p>
         <p class="series__note">Пример структуры серии&nbsp;— состав подбираем под вашу задачу</p>
       </div>
       <ol class="series__list">
@@ -500,17 +500,6 @@
             <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
           </article>
         </li>
-        <li class="slider__slide">
-          <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Краснодарский институт кооперации" data-video="video/institut-tv.mp4" data-preview="video/preview/institut-tv.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский институт кооперации">
-              <img class="case__poster" src="img/cases/institut-tv.jpg" alt="Краснодарский институт кооперации: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
-            <h3 class="case__title">Краснодарский институт кооперации</h3>
-            <p class="case__text">AI-ролик для ТВ · ТВ-реклама</p>
-          </article>
-        </li>
     </ul>
   </div>
 </section>
@@ -644,6 +633,26 @@
   <div class="slider slider--portrait" data-slider>
     <ul class="slider__track">
         <li class="slider__slide">
+          <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="«Звони 112»" data-video="video/zvoni-112-verbovka.mp4" data-preview="video/preview/zvoni-112-verbovka.mp4" data-portrait>
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Звони 112»">
+              <img class="case__poster" src="img/cases/zvoni-112-verbovka.jpg" alt="«Звони 112»: социальный ролик о вербовке подростков" width="540" height="960" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:40</span>
+            </button>
+            <h3 class="case__title">«Звони 112»</h3>
+            <p class="case__text">Вертикальное видео · социальный ролик о вербовке подростков</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="«Звони 112»" data-video="video/zvoni-112-terrorizm.mp4" data-preview="video/preview/zvoni-112-terrorizm.mp4" data-portrait>
+            <button class="case__media" type="button" aria-label="Смотреть ролик: «Звони 112»">
+              <img class="case__poster" src="img/cases/zvoni-112-terrorizm.jpg" alt="«Звони 112»: социальный ролик против терроризма" width="540" height="960" loading="lazy">
+              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:45</span>
+            </button>
+            <h3 class="case__title">«Звони 112»</h3>
+            <p class="case__text">Вертикальное видео · социальный ролик против терроризма</p>
+          </article>
+        </li>
+        <li class="slider__slide">
           <article class="case case--portrait" data-case data-kind="Вертикальное видео" data-title="Grand Resort Jermuk" data-video="video/grand-resort-jermuk.mp4" data-preview="video/preview/grand-resort-jermuk.mp4" data-portrait>
             <button class="case__media" type="button" aria-label="Смотреть ролик: Grand Resort Jermuk">
               <img class="case__poster" src="img/cases/grand-resort-jermuk.jpg" alt="Grand Resort Jermuk: ролик для отеля" width="540" height="960" loading="lazy">
@@ -689,6 +698,146 @@
   <div class="slider" data-slider>
     <ul class="slider__track">
         <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-kitchen-living.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
+              <img class="case__poster" src="img/renders/central-kitchen-living-s.jpg" alt="ЖК «Центральный»: кухня-гостиная, «девелопмент-юг»" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Центральный»</h3>
+            <p class="case__text">3D-визуализация · кухня-гостиная, «Девелопмент-Юг»</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-evening.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-yard-evening-s.jpg" alt="Двор жилого комплекса: экстерьер, вечернее освещение" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, вечернее освещение</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-family-room.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
+              <img class="case__poster" src="img/renders/central-family-room-s.jpg" alt="ЖК «Центральный»: кухня-гостиная для семьи с ребёнком" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Центральный»</h3>
+            <p class="case__text">3D-визуализация · кухня-гостиная для семьи с ребёнком</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-bedroom.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
+              <img class="case__poster" src="img/renders/central-bedroom-s.jpg" alt="ЖК «Центральный»: спальня" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Центральный»</h3>
+            <p class="case__text">3D-визуализация · спальня</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-terrace.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-terrace-s.jpg" alt="Двор жилого комплекса: экстерьер, зона отдыха" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, зона отдыха</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-living-furnished.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
+              <img class="case__poster" src="img/renders/rechnye-living-furnished-s.jpg" alt="ЖК «Речные кварталы»: гостиная с мебелью, «девелопмент-юг»" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Речные кварталы»</h3>
+            <p class="case__text">3D-визуализация · гостиная с мебелью, «Девелопмент-Юг»</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-playground.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-playground-s.jpg" alt="Двор жилого комплекса: экстерьер, детская площадка" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, детская площадка</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-office.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
+              <img class="case__poster" src="img/renders/central-office-s.jpg" alt="ЖК «Центральный»: кабинет" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Центральный»</h3>
+            <p class="case__text">3D-визуализация · кабинет</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-table.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-table-s.jpg" alt="Двор жилого комплекса: экстерьер, общий стол" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, общий стол</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-bedroom.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
+              <img class="case__poster" src="img/renders/rechnye-bedroom-s.jpg" alt="ЖК «Речные кварталы»: спальня с мебелью" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Речные кварталы»</h3>
+            <p class="case__text">3D-визуализация · спальня с мебелью</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-pergola.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-pergola-s.jpg" alt="Двор жилого комплекса: экстерьер, беседка" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, беседка</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-kitchen.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
+              <img class="case__poster" src="img/renders/rechnye-kitchen-s.jpg" alt="ЖК «Речные кварталы»: кухня с мебелью" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Речные кварталы»</h3>
+            <p class="case__text">3D-визуализация · кухня с мебелью</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-wardrobe.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
+              <img class="case__poster" src="img/renders/central-wardrobe-s.jpg" alt="ЖК «Центральный»: гардеробная" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">ЖК «Центральный»</h3>
+            <p class="case__text">3D-визуализация · гардеробная</p>
+          </article>
+        </li>
+        <li class="slider__slide">
+          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-day.jpg">
+            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
+              <img class="case__poster" src="img/renders/exterior-yard-day-s.jpg" alt="Двор жилого комплекса: экстерьер, вид сверху" width="960" height="536" loading="lazy">
+              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
+            </button>
+            <h3 class="case__title">Двор жилого комплекса</h3>
+            <p class="case__text">3D-визуализация · экстерьер, вид сверху</p>
+          </article>
+        </li>
+        <li class="slider__slide">
           <article class="case" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-video="video/rechnye-kvartaly-oblet.mp4" data-preview="video/preview/rechnye-kvartaly-oblet.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: ЖК «Речные кварталы»">
               <img class="case__poster" src="img/cases/rechnye-kvartaly-oblet.jpg" alt="ЖК «Речные кварталы»: видеооблёт квартиры с отделкой" width="960" height="540" loading="lazy">
@@ -716,146 +865,6 @@
             </button>
             <h3 class="case__title">ЖК «Речные кварталы»</h3>
             <p class="case__text">3D-визуализация · та же гостиная в отделке white box</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-bedroom.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
-              <img class="case__poster" src="img/renders/rechnye-bedroom-s.jpg" alt="ЖК «Речные кварталы»: спальня с мебелью" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Речные кварталы»</h3>
-            <p class="case__text">3D-визуализация · спальня с мебелью</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-kitchen.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
-              <img class="case__poster" src="img/renders/rechnye-kitchen-s.jpg" alt="ЖК «Речные кварталы»: кухня с мебелью" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Речные кварталы»</h3>
-            <p class="case__text">3D-визуализация · кухня с мебелью</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-family-room.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
-              <img class="case__poster" src="img/renders/central-family-room-s.jpg" alt="ЖК «Центральный»: кухня-гостиная для семьи с ребёнком" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Центральный»</h3>
-            <p class="case__text">3D-визуализация · кухня-гостиная для семьи с ребёнком</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-table.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-table-s.jpg" alt="Двор жилого комплекса: экстерьер, общий стол" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, общий стол</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-pergola.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-pergola-s.jpg" alt="Двор жилого комплекса: экстерьер, беседка" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, беседка</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-wardrobe.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
-              <img class="case__poster" src="img/renders/central-wardrobe-s.jpg" alt="ЖК «Центральный»: гардеробная" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Центральный»</h3>
-            <p class="case__text">3D-визуализация · гардеробная</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-day.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-yard-day-s.jpg" alt="Двор жилого комплекса: экстерьер, вид сверху" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, вид сверху</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Речные кварталы»" data-image="img/renders/rechnye-living-furnished.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Речные кварталы»">
-              <img class="case__poster" src="img/renders/rechnye-living-furnished-s.jpg" alt="ЖК «Речные кварталы»: гостиная с мебелью, «девелопмент-юг»" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Речные кварталы»</h3>
-            <p class="case__text">3D-визуализация · гостиная с мебелью, «Девелопмент-Юг»</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-kitchen-living.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
-              <img class="case__poster" src="img/renders/central-kitchen-living-s.jpg" alt="ЖК «Центральный»: кухня-гостиная, «девелопмент-юг»" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Центральный»</h3>
-            <p class="case__text">3D-визуализация · кухня-гостиная, «Девелопмент-Юг»</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-terrace.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-terrace-s.jpg" alt="Двор жилого комплекса: экстерьер, зона отдыха" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, зона отдыха</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-yard-evening.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-yard-evening-s.jpg" alt="Двор жилого комплекса: экстерьер, вечернее освещение" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, вечернее освещение</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-bedroom.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
-              <img class="case__poster" src="img/renders/central-bedroom-s.jpg" alt="ЖК «Центральный»: спальня" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Центральный»</h3>
-            <p class="case__text">3D-визуализация · спальня</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="Двор жилого комплекса" data-image="img/renders/exterior-playground.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: Двор жилого комплекса">
-              <img class="case__poster" src="img/renders/exterior-playground-s.jpg" alt="Двор жилого комплекса: экстерьер, детская площадка" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">Двор жилого комплекса</h3>
-            <p class="case__text">3D-визуализация · экстерьер, детская площадка</p>
-          </article>
-        </li>
-        <li class="slider__slide">
-          <article class="case case--render" data-case data-kind="3D-визуализация" data-title="ЖК «Центральный»" data-image="img/renders/central-office.jpg">
-            <button class="case__media" type="button" aria-label="Открыть визуализацию: ЖК «Центральный»">
-              <img class="case__poster" src="img/renders/central-office-s.jpg" alt="ЖК «Центральный»: кабинет" width="960" height="536" loading="lazy">
-              <span class="case__play"><svg class="icon icon--stroke case__play-icon" aria-hidden="true"><use href="#i-expand"></use></svg>Открыть</span>
-            </button>
-            <h3 class="case__title">ЖК «Центральный»</h3>
-            <p class="case__text">3D-визуализация · кабинет</p>
           </article>
         </li>
     </ul>
@@ -1169,8 +1178,7 @@
       <div class="request__contacts">
         <a class="request__phone" href="tel:+79186285320">+7 918 628-53-20</a>
         <div class="request__links">
-          <a class="btn btn--ghost btn--pill" href="https://t.me/Diseller" target="_blank" rel="noopener"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-telegram"></use></svg>Telegram</a>
-          <a class="btn btn--ghost btn--pill" href="#" data-todo="ссылка на MAX">MAX</a>
+          <a class="btn btn--ghost btn--pill" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-max"></use></svg>MAX</a>
           <a class="btn btn--ghost btn--pill" href="mailto:ceo@mediaseller.agency"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-mail"></use></svg>ceo@mediaseller.agency</a>
         </div>
       </div>
@@ -1188,8 +1196,7 @@
         <span class="visually-hidden">Способ связи</span>
         <select class="form__control form__control--select" name="method">
           <option value="phone">Позвонить</option>
-          <option value="telegram">Telegram</option>
-          <option value="max">MAX</option>
+                    <option value="max">MAX</option>
           <option value="email">Почта</option>
         </select>
       </label>
@@ -1219,14 +1226,14 @@
     <a class="logo footer__logo" href="https://mediaseller.agency/" aria-label="Mediaseller — на главную">
       <img class="logo__image" src="img/logo.png" alt="Mediaseller" width="300" height="97" loading="lazy">
     </a>
-    <a class="footer__shout" href="https://t.me/Diseller" target="_blank" rel="noopener">Написать в&nbsp;Telegram</a>
+    <a class="footer__shout" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…">Написать в&nbsp;MAX</a>
     <a class="footer__shout" href="mailto:ceo@mediaseller.agency">ceo@mediaseller.agency</a>
     <div class="footer__tools">
       <a class="footer__brief" href="#ai"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>Портфолио</a>
       <div class="footer__capsule">
         <button class="btn btn--pill" type="button" data-modal-open="request">Обсудить задачу</button>
         <a class="social" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-        <a class="social" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+        <a class="social" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…" aria-label="Написать в MAX"><svg class="icon" aria-hidden="true"><use href="#i-max"></use></svg></a>
         <a class="social" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
       </div>
     </div>
@@ -1261,7 +1268,7 @@
       <ul class="footer__list">
         <li><a class="footer__link" href="tel:+79186285320">+7 918 628-53-20</a></li>
         <li><a class="footer__link" href="mailto:ceo@mediaseller.agency">ceo@mediaseller.agency</a></li>
-        <li><a class="footer__link" href="https://t.me/Diseller" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a class="footer__link" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…">MAX</a></li>
       </ul>
     </div>
   </div>
@@ -1319,8 +1326,7 @@
             <span class="visually-hidden">Способ связи</span>
             <select class="form__control form__control--select" name="method">
               <option value="phone">Позвонить</option>
-              <option value="telegram">Telegram</option>
-              <option value="max">MAX</option>
+                            <option value="max">MAX</option>
               <option value="email">Почта</option>
             </select>
           </label>
@@ -1343,7 +1349,7 @@
         <a class="popup__phone" href="tel:+79186285320">+7 918 628-53-20</a>
         <div class="popup__links">
           <a class="social" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-          <a class="social" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+          <a class="social" href="#" data-todo="ссылка-приглашение на профиль в MAX: max.ru/u/…" aria-label="Написать в MAX"><svg class="icon" aria-hidden="true"><use href="#i-max"></use></svg></a>
         </div>
       </div>
     </div>

@@ -125,7 +125,7 @@
 }
 
 .logo__image {
-  width: 8.6rem;
+  width: 7.2rem;
   height: auto;
 }
 
@@ -172,6 +172,10 @@
   gap: 2rem;
   height: var(--ms-header);
   padding-inline: var(--ms-gutter);
+}
+
+.footer__logo .logo__image {
+  width: 5.6rem;
 }
 
 .header__logo {
@@ -369,6 +373,11 @@
   letter-spacing: -0.02em;
   white-space: nowrap;
   color: var(--ms-accent);
+}
+
+.trust__value--text {
+  font-size: 1.9rem;
+  line-height: 1.26;
 }
 
 .trust__label {
@@ -621,6 +630,10 @@
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   border-radius: var(--ms-radius-l);
+}
+
+.series--accent {
+  border-color: var(--ms-accent);
 }
 
 .series__head {
@@ -2081,6 +2094,10 @@
 }
 
 @media (max-width: 768px) {
+  .trust__value.trust__value--text {
+    font-size: 1.5rem;
+  }
+
   .section__head {
     align-items: flex-start;
   }
@@ -2273,7 +2290,7 @@
   }
 
   .logo__image {
-    width: 7.2rem;
+    width: 6.2rem;
   }
 
   .clients {
@@ -2431,6 +2448,10 @@
 }
 
 @media (max-width: 480px) {
+  .trust__value.trust__value--text {
+    font-size: 1.2rem;
+  }
+
   .section__title.section__title--main {
     font-size: 1.6rem;
   }
