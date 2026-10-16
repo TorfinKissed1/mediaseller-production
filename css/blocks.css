@@ -1204,6 +1204,92 @@
   color: rgba(255, 255, 255, 0.86);
 }
 
+.insight__facts {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem 4rem;
+  margin-top: 2.6rem;
+  padding-inline: var(--ms-gutter);
+}
+
+.insight__fact {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.insight__value {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ms-accent);
+}
+
+.insight__label {
+  font-size: 0.86rem;
+  color: var(--c-muted);
+}
+
+.insight__countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 0;
+  max-width: 60rem;
+  margin: 2.2rem auto 0;
+  padding-inline: var(--ms-gutter);
+  font-family: var(--ms-font-serif);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.insight__country:not(:last-child)::after {
+  content: '·';
+  margin-inline: 0.7rem;
+  color: var(--ms-accent);
+}
+
+.insight__agencies {
+  max-width: 72rem;
+  margin: 2rem auto 0;
+  padding-inline: var(--ms-gutter);
+  text-align: center;
+}
+
+.insight__cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.insight__agency {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--c-line);
+  border-radius: var(--ms-radius-pill);
+  transition: border-color var(--ms-speed) var(--ms-ease), color var(--ms-speed) var(--ms-ease);
+}
+
+.insight__agency:hover {
+  color: var(--ms-white);
+  border-color: var(--ms-accent);
+}
+
+.insight__more {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ms-accent);
+  border: 1px solid var(--ms-accent);
+  border-radius: var(--ms-radius-pill);
+}
+
 .insight__bar {
   display: flex;
   align-items: center;
@@ -2094,6 +2180,35 @@
 }
 
 @media (max-width: 768px) {
+  .insight__facts {
+    gap: 1rem 2rem;
+  }
+
+  .insight__value {
+    font-size: 1.8rem;
+  }
+
+  .insight__countries {
+    font-size: 0.94rem;
+  }
+
+  .insight__country:not(:last-child)::after {
+    margin-inline: 0.45rem;
+  }
+
+  .insight__agency {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .insight__agencies:not(.is-open) .insight__agency:nth-child(n + 21) {
+    display: none;
+  }
+
+  .insight__agencies:not(.is-open) .insight__more {
+    display: inline-block;
+  }
+
   .trust__value.trust__value--text {
     font-size: 1.5rem;
   }

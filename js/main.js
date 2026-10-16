@@ -17,6 +17,7 @@
   initPlayer();
   initRequestModal();
   initFaq();
+  initMore();
   initForms();
   initReveal();
   initAutoplay();
@@ -616,6 +617,14 @@
           playing.catch(function () {});
         }
       }
+    });
+  }
+
+  function initMore() {
+    toArray(document.querySelectorAll('[data-more]')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        button.closest('[data-more-list]').classList.add('is-open');
+      });
     });
   }
 
