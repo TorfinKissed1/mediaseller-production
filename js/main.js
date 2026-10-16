@@ -17,7 +17,6 @@
   initPlayer();
   initRequestModal();
   initFaq();
-  initMore();
   initForms();
   initReveal();
   initAutoplay();
@@ -204,16 +203,17 @@
   }
 
   function initMarquee() {
-    var track = document.querySelector('[data-marquee]');
-    if (!track || reduceMotion) {
+    if (reduceMotion) {
       return;
     }
-    toArray(track.children).forEach(function (item) {
-      var clone = item.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
+    toArray(document.querySelectorAll('[data-marquee]')).forEach(function (track) {
+      toArray(track.children).forEach(function (item) {
+        var clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+      track.classList.add('is-running');
     });
-    track.classList.add('is-running');
   }
 
   function initSliders() {
@@ -617,14 +617,6 @@
           playing.catch(function () {});
         }
       }
-    });
-  }
-
-  function initMore() {
-    toArray(document.querySelectorAll('[data-more]')).forEach(function (button) {
-      button.addEventListener('click', function () {
-        button.closest('[data-more-list]').classList.add('is-open');
-      });
     });
   }
 

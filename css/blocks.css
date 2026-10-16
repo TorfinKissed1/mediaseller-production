@@ -1251,43 +1251,49 @@
   color: var(--ms-accent);
 }
 
-.insight__agencies {
-  max-width: 72rem;
-  margin: 2rem auto 0;
-  padding-inline: var(--ms-gutter);
-  text-align: center;
+.insight__ticker {
+  margin-top: 2.4rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.insight__cloud {
+.insight__track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  width: max-content;
+}
+
+.insight__track.is-running {
+  animation: insight-run 150s linear infinite;
+}
+
+.insight__ticker:hover .insight__track {
+  animation-play-state: paused;
 }
 
 .insight__agency {
-  padding: 0.45rem 0.95rem;
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.86);
-  border: 1px solid var(--c-line);
-  border-radius: var(--ms-radius-pill);
-  transition: border-color var(--ms-speed) var(--ms-ease), color var(--ms-speed) var(--ms-ease);
+  flex: none;
+  font-family: var(--ms-font-serif);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.insight__agency:hover {
-  color: var(--ms-white);
-  border-color: var(--ms-accent);
-}
-
-.insight__more {
-  display: none;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.88rem;
-  font-weight: 600;
+.insight__agency::after {
+  content: '·';
+  margin-inline: 1.2rem;
   color: var(--ms-accent);
-  border: 1px solid var(--ms-accent);
-  border-radius: var(--ms-radius-pill);
+}
+
+@keyframes insight-run {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .insight__bar {
@@ -2180,6 +2186,14 @@
 }
 
 @media (max-width: 768px) {
+  .insight__agency {
+    font-size: 1.15rem;
+  }
+
+  .insight__agency::after {
+    margin-inline: 0.8rem;
+  }
+
   .insight__facts {
     gap: 1rem 2rem;
   }
@@ -2194,19 +2208,6 @@
 
   .insight__country:not(:last-child)::after {
     margin-inline: 0.45rem;
-  }
-
-  .insight__agency {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  .insight__agencies:not(.is-open) .insight__agency:nth-child(n + 21) {
-    display: none;
-  }
-
-  .insight__agencies:not(.is-open) .insight__more {
-    display: inline-block;
   }
 
   .trust__value.trust__value--text {
@@ -2660,8 +2661,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .clients {
+  .clients,
+  .insight__ticker {
     overflow-x: auto;
+  }
+
+  .insight__track.is-running {
+    animation: none;
   }
 
   .clients__track.is-running {
