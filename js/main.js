@@ -527,6 +527,7 @@
       var videoSource = item.getAttribute('data-video');
       clear();
 
+      player.classList.remove('player--single');
       player.classList.toggle('player--portrait', item.hasAttribute('data-portrait'));
       player.classList.toggle('player--image', !videoSource);
 
@@ -551,7 +552,28 @@
       kind.textContent = text ? text.textContent : item.getAttribute('data-kind');
     }
 
+    function showReview(item) {
+      clear();
+      player.classList.add('player--single');
+      player.classList.remove('player--portrait', 'player--image');
+      var video = document.createElement('video');
+      video.className = 'player__video';
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.src = item.getAttribute('data-review');
+      frame.appendChild(video);
+      title.textContent = item.getAttribute('data-title');
+      kind.textContent = 'Видеоотзыв';
+    }
+
     document.addEventListener('click', function (event) {
+      var review = event.target.closest('.case__review');
+      if (review) {
+        showReview(review.closest('[data-case]'));
+        modal.open(review);
+        return;
+      }
       var clone = event.target.closest('.showcase__item');
       var opener = event.target.closest('[data-case-open]');
       var media = opener
@@ -582,7 +604,7 @@
     });
 
     document.addEventListener('keydown', function (event) {
-      if (!modalElement.classList.contains('is-open') || event.target.tagName === 'VIDEO') {
+      if (!modalElement.classList.contains('is-open') || event.target.tagName === 'VIDEO' || player.classList.contains('player--single')) {
         return;
       }
       if (event.key === 'ArrowLeft') {

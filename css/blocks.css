@@ -925,6 +925,42 @@
   border-radius: var(--ms-radius-pill);
 }
 
+.case__frame {
+  position: relative;
+}
+
+.case__review {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2rem;
+  padding: 0 0.85rem 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ms-white);
+  background: rgba(8, 13, 24, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--ms-radius-pill);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: color var(--ms-speed) var(--ms-ease), background-color var(--ms-speed) var(--ms-ease), border-color var(--ms-speed) var(--ms-ease);
+}
+
+.case__review:hover {
+  color: var(--ms-ink);
+  background: var(--ms-accent);
+  border-color: var(--ms-accent);
+}
+
+.case__review-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
 .case__play-icon {
   width: 0.9rem;
   height: 0.9rem;
@@ -1318,60 +1354,12 @@
 }
 
 /* ============ Фото из поездок ============ */
-.photo {
-  position: relative;
-  display: grid;
-  grid-template-columns: 7.4rem minmax(0, 1fr);
-}
-
-.photo__number {
-  font-size: 15.6rem;
-  font-weight: 600;
-  line-height: 0.82;
-  letter-spacing: -0.06em;
-  color: transparent;
-  background: linear-gradient(67deg, rgba(64, 64, 64, 0.52) 35%, rgba(255, 255, 255, 0.9) 130%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  user-select: none;
-}
-
-.photo__body {
-  position: relative;
-  min-width: 0;
-  margin-left: -1.2rem;
-}
-
-.photo__frame {
-  aspect-ratio: 523 / 273;
-  background: repeating-linear-gradient(135deg, #0f1728 0 0.75rem, #131d32 0.75rem 1.5rem);
-  border: 1px dashed var(--ms-steel);
-  border-radius: var(--ms-radius-s);
-}
-
-.photo__picture {
+.trip {
   width: 100%;
-  aspect-ratio: 523 / 273;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--ms-radius-s);
-}
-
-.photo__caption {
-  display: grid;
-  gap: 0.2rem;
-  margin-top: 0.8rem;
-  font-size: 0.84rem;
-  color: var(--c-muted);
-}
-
-.photo__title {
-  font-size: 1.04rem;
-  font-weight: 600;
-  color: var(--c-text);
-}
-
-.photo__meta {
-  color: var(--ms-accent);
 }
 
 /* ============ Светлая зона ============ */
@@ -1776,6 +1764,10 @@
   line-height: 1.5;
 }
 
+.footer__title--next {
+  margin-top: 1.6rem;
+}
+
 .footer__title {
   margin-bottom: 1.1rem;
   font-size: 0.94rem;
@@ -1927,6 +1919,10 @@
   margin-top: 0.2rem;
   font-size: 0.84rem;
   color: var(--c-muted);
+}
+
+.player--single .player__nav {
+  display: none;
 }
 
 .player__nav {
@@ -2137,14 +2133,6 @@
 
   .slider--2 {
     --per: 1.6;
-  }
-
-  .photo {
-    grid-template-columns: 5.2rem minmax(0, 1fr);
-  }
-
-  .photo__number {
-    font-size: 11rem;
   }
 
   .faq {
@@ -2461,18 +2449,6 @@
     margin-top: 2.8rem;
   }
 
-  .photo {
-    grid-template-columns: 3.6rem minmax(0, 1fr);
-  }
-
-  .photo__number {
-    font-size: 7.5rem;
-  }
-
-  .photo__body {
-    margin-left: -0.6rem;
-  }
-
   .faq__question {
     gap: 1rem;
     padding: 1.15rem 1.25rem;
@@ -2615,6 +2591,19 @@
 }
 
 @media (max-width: 375px) {
+  .footer__capsule {
+    gap: 0.25rem;
+  }
+
+  .footer__capsule .btn {
+    padding-inline: 0.9rem;
+  }
+
+  .footer__capsule .social {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .section__title.section__title--main {
     font-size: 1.5rem;
   }

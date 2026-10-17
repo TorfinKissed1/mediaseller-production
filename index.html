@@ -25,6 +25,7 @@
   <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 8.3 7.7-5.6a.7.7 0 0 0-.8-1.1L12 11.5 5.1 6.6a.7.7 0 0 0-.8 1.1l7.7 5.6Z"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.4 3.3 2.7 10.5c-.9.4-.9 1.2 0 1.5l4.7 1.5 1.8 5.7c.2.6.9.8 1.4.4l2.7-2.3 4.7 3.5c.6.4 1.4.1 1.5-.6L22.7 4.5c.2-1-.5-1.6-1.3-1.2ZM9.4 14.2l8.3-5.3c.3-.2.6.2.3.4l-6.8 6.3-.3 3-1.5-4.4Z"/></symbol>
   <symbol id="i-max" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 0 0-8.3 14.1l-1.1 3.6a.8.8 0 0 0 1 1l3.6-1.1A9.5 9.5 0 1 0 12 2.5Zm-4 13.2V8.4h1.6l2.4 3.4 2.4-3.4H16v7.3h-1.7v-4.5L12 14.4l-2.3-3.2v4.5H8Z" clip-rule="evenodd"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.7 2.5h2.6a1 1 0 0 1 1 .7l1.1 3.5a1 1 0 0 1-.3 1.1L9.2 9.3a12.3 12.3 0 0 0 5.5 5.5l1.5-1.9a1 1 0 0 1 1.1-.3l3.5 1.1a1 1 0 0 1 .7 1v2.6a2.2 2.2 0 0 1-2.4 2.2C10.8 18.9 5.1 13.2 4.5 4.9a2.2 2.2 0 0 1 2.2-2.4Z"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 4.5A1.5 1.5 0 0 1 4.5 3h6.9a1.5 1.5 0 0 1 1.06.44l8.1 8.1a1.5 1.5 0 0 1 0 2.12l-6.9 6.9a1.5 1.5 0 0 1-2.12 0l-8.1-8.1A1.5 1.5 0 0 1 3 11.4V4.5Zm4.5 4.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"/></symbol>
@@ -528,91 +529,118 @@
   <div class="slider slider--2" data-slider>
     <ul class="slider__track">
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Жасмин»" data-video="video/zhasmin.mp4" data-preview="video/preview/zhasmin.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Жасмин»">
-              <img class="case__poster" src="img/cases/zhasmin.jpg" alt="«Жасмин»: рекламный ролик круп" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
-            </button>
+          <article class="case" data-case data-review="video/zhasmin.mp4" data-kind="Съёмка" data-title="«Жасмин»" data-video="video/zhasmin.mp4" data-preview="video/preview/zhasmin.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Жасмин»">
+                <img class="case__poster" src="img/cases/zhasmin.jpg" alt="«Жасмин»: рекламный ролик круп" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Жасмин»</h3>
             <p class="case__text">Съёмка · рекламный ролик круп</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Три З»" data-video="video/tri-z.mp4" data-preview="video/preview/tri-z.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Три З»">
-              <img class="case__poster" src="img/cases/tri-z.jpg" alt="«Три З»: рекламный ролик клиники заботы о зрении" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
-            </button>
+          <article class="case" data-case data-review="video/tri-z.mp4" data-kind="Съёмка" data-title="«Три З»" data-video="video/tri-z.mp4" data-preview="video/preview/tri-z.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Три З»">
+                <img class="case__poster" src="img/cases/tri-z.jpg" alt="«Три З»: рекламный ролик клиники заботы о зрении" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Три З»</h3>
             <p class="case__text">Съёмка · рекламный ролик клиники заботы о зрении</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-lakomka.mp4" data-preview="video/preview/karavay-lakomka.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
-              <img class="case__poster" src="img/cases/karavay-lakomka.jpg" alt="«Каравай Кубани»: рекламный ролик выпечки «лакомка»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:31</span>
-            </button>
+          <article class="case" data-case data-review="video/karavay-lakomka.mp4" data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-lakomka.mp4" data-preview="video/preview/karavay-lakomka.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
+                <img class="case__poster" src="img/cases/karavay-lakomka.jpg" alt="«Каравай Кубани»: рекламный ролик выпечки «лакомка»" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:31</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Каравай Кубани»</h3>
             <p class="case__text">Съёмка · рекламный ролик выпечки «Лакомка»</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Кубань Инструмент»" data-video="video/kuban-instrument.mp4" data-preview="video/preview/kuban-instrument.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Кубань Инструмент»">
-              <img class="case__poster" src="img/cases/kuban-instrument.jpg" alt="«Кубань Инструмент»: рекламный ролик сети магазинов инструмента" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
-            </button>
+          <article class="case" data-case data-review="video/kuban-instrument.mp4" data-kind="Съёмка" data-title="«Кубань Инструмент»" data-video="video/kuban-instrument.mp4" data-preview="video/preview/kuban-instrument.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Кубань Инструмент»">
+                <img class="case__poster" src="img/cases/kuban-instrument.jpg" alt="«Кубань Инструмент»: рекламный ролик сети магазинов инструмента" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Кубань Инструмент»</h3>
             <p class="case__text">Съёмка · рекламный ролик сети магазинов инструмента</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Мацеста чай»" data-video="video/matsesta-chay.mp4" data-preview="video/preview/matsesta-chay.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Мацеста чай»">
-              <img class="case__poster" src="img/cases/matsesta-chay.jpg" alt="«Мацеста чай»: рекламный ролик краснодарского чая" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
-            </button>
+          <article class="case" data-case data-review="video/matsesta-chay.mp4" data-kind="Съёмка" data-title="«Мацеста чай»" data-video="video/matsesta-chay.mp4" data-preview="video/preview/matsesta-chay.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Мацеста чай»">
+                <img class="case__poster" src="img/cases/matsesta-chay.jpg" alt="«Мацеста чай»: рекламный ролик краснодарского чая" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Мацеста чай»</h3>
             <p class="case__text">Съёмка · рекламный ролик краснодарского чая</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-5-zlakov.mp4" data-preview="video/preview/karavay-5-zlakov.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
-              <img class="case__poster" src="img/cases/karavay-5-zlakov.jpg" alt="«Каравай Кубани»: рекламный ролик хлеба «5 злаков»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
-            </button>
+          <article class="case" data-case data-review="video/karavay-5-zlakov.mp4" data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-5-zlakov.mp4" data-preview="video/preview/karavay-5-zlakov.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
+                <img class="case__poster" src="img/cases/karavay-5-zlakov.jpg" alt="«Каравай Кубани»: рекламный ролик хлеба «5 злаков»" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Каравай Кубани»</h3>
             <p class="case__text">Съёмка · рекламный ролик хлеба «5 злаков»</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" id="case-solaair-cube" data-case data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-cube.mp4" data-preview="video/preview/solaair-cube.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
-              <img class="case__poster" src="img/cases/solaair-cube.jpg" alt="SolaAir: презентация арт-объекта «зеркальный куб»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
-            </button>
+          <article class="case" id="case-solaair-cube" data-case data-review="video/solaair-cube.mp4" data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-cube.mp4" data-preview="video/preview/solaair-cube.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
+                <img class="case__poster" src="img/cases/solaair-cube.jpg" alt="SolaAir: презентация арт-объекта «зеркальный куб»" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Зеркальный куб»</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="«Сантехника Онлайн»" data-video="video/santehnika-online.mp4" data-preview="video/preview/santehnika-online.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: «Сантехника Онлайн»">
-              <img class="case__poster" src="img/cases/santehnika-online.jpg" alt="«Сантехника Онлайн»: рекламный ролик «измени отражение»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
-            </button>
+          <article class="case" data-case data-review="video/santehnika-online.mp4" data-kind="Съёмка" data-title="«Сантехника Онлайн»" data-video="video/santehnika-online.mp4" data-preview="video/preview/santehnika-online.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: «Сантехника Онлайн»">
+                <img class="case__poster" src="img/cases/santehnika-online.jpg" alt="«Сантехника Онлайн»: рекламный ролик «измени отражение»" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">«Сантехника Онлайн»</h3>
             <p class="case__text">Съёмка · рекламный ролик «Измени отражение»</p>
           </article>
         </li>
         <li class="slider__slide">
-          <article class="case" data-case data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-lenty.mp4" data-preview="video/preview/solaair-lenty.mp4">
-            <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
-              <img class="case__poster" src="img/cases/solaair-lenty.jpg" alt="SolaAir: презентация арт-объекта «георгиевские ленты»" width="960" height="540" loading="lazy">
-              <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
-            </button>
+          <article class="case" data-case data-review="video/solaair-lenty.mp4" data-kind="Съёмка" data-title="SolaAir" data-video="video/solaair-lenty.mp4" data-preview="video/preview/solaair-lenty.mp4">
+            <div class="case__frame">
+              <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
+                <img class="case__poster" src="img/cases/solaair-lenty.jpg" alt="SolaAir: презентация арт-объекта «георгиевские ленты»" width="960" height="540" loading="lazy">
+                <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
+              </button>
+              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
+            </div>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Георгиевские ленты»</p>
           </article>
@@ -1025,79 +1053,61 @@
         <button class="arrow" type="button" data-slider-next aria-label="Фото из поездок: вперёд"><svg class="icon icon--stroke arrow__icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
       </div>
   </div>
-  <div class="slider slider--2" data-slider>
+  <div class="slider" data-slider>
     <ul class="slider__track">
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">1</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">Leo Burnett</span>
-                <span class="photo__meta">Гонконг · 2012</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/01.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">2</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">R/GA</span>
-                <span class="photo__meta">Нью-Йорк · 2013</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/02.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">3</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">Lions Festivals</span>
-                <span class="photo__meta">Лондон · 2014</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/03.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">4</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">NHK</span>
-                <span class="photo__meta">Токио · 2014</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/04.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">5</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">DDB Group Korea</span>
-                <span class="photo__meta">Сеул · 2015</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/05.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
         <li class="slider__slide">
-          <figure class="photo">
-            <span class="photo__number" aria-hidden="true">6</span>
-            <div class="photo__body">
-              <div class="photo__frame"></div>
-              <figcaption class="photo__caption">
-                <span class="photo__title">Ogilvy</span>
-                <span class="photo__meta">Сингапур · 2015</span>
-              </figcaption>
-            </div>
-          </figure>
+          <img class="trip" src="img/trips/06.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/07.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/08.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/09.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/10.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/11.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/12.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/13.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/14.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/15.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/16.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/17.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
+        </li>
+        <li class="slider__slide">
+          <img class="trip" src="img/trips/18.jpg" alt="Стажировка Mediaseller в зарубежном агентстве" width="960" height="720" loading="lazy">
         </li>
     </ul>
   </div>
@@ -1276,6 +1286,7 @@
         <a class="request__phone" href="tel:+79186285320">+7 918 628-53-20</a>
         <div class="request__links">
           <a class="btn btn--ghost btn--pill" href="https://max.ru/join/XnyC0g0Nf6u6KtuWZ_vwT5q0j5sbBd5vSVGVpN7GVW8" target="_blank" rel="noopener"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-max"></use></svg>MAX</a>
+          <a class="btn btn--ghost btn--pill" href="https://t.me/Diseller" target="_blank" rel="noopener"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-telegram"></use></svg>Telegram</a>
           <a class="btn btn--ghost btn--pill" href="mailto:ceo@mediaseller.agency"><svg class="icon btn__icon" aria-hidden="true"><use href="#i-mail"></use></svg>ceo@mediaseller.agency</a>
         </div>
       </div>
@@ -1331,6 +1342,7 @@
         <button class="btn btn--pill" type="button" data-modal-open="request">Обсудить задачу</button>
         <a class="social" href="mailto:ceo@mediaseller.agency" aria-label="Написать на почту"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
         <a class="social" href="https://max.ru/join/XnyC0g0Nf6u6KtuWZ_vwT5q0j5sbBd5vSVGVpN7GVW8" target="_blank" rel="noopener" aria-label="Написать в MAX"><svg class="icon" aria-hidden="true"><use href="#i-max"></use></svg></a>
+        <a class="social" href="https://t.me/Diseller" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
         <a class="social" href="tel:+79186285320" aria-label="Позвонить"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></a>
       </div>
     </div>
@@ -1365,7 +1377,13 @@
       <ul class="footer__list">
         <li><a class="footer__link" href="tel:+79186285320">+7 918 628-53-20</a></li>
         <li><a class="footer__link" href="mailto:ceo@mediaseller.agency">ceo@mediaseller.agency</a></li>
-        <li><a class="footer__link" href="https://max.ru/join/XnyC0g0Nf6u6KtuWZ_vwT5q0j5sbBd5vSVGVpN7GVW8" target="_blank" rel="noopener">MAX</a></li>
+        <li><a class="footer__link" href="https://max.ru/join/XnyC0g0Nf6u6KtuWZ_vwT5q0j5sbBd5vSVGVpN7GVW8" target="_blank" rel="noopener">Чат в&nbsp;MAX</a></li>
+        <li><a class="footer__link" href="https://t.me/Diseller" target="_blank" rel="noopener">Чат в&nbsp;Telegram</a></li>
+      </ul>
+      <p class="footer__title footer__title--next">Каналы</p>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="https://max.ru/channel_mediaseller" target="_blank" rel="noopener">Канал в&nbsp;MAX</a></li>
+        <li><a class="footer__link" href="https://t.me/lukashovcases" target="_blank" rel="noopener">Канал в&nbsp;Telegram</a></li>
       </ul>
     </div>
   </div>
