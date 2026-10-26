@@ -666,38 +666,8 @@
     });
   }
 
-  function formatPhone(value) {
-    var digits = value.replace(/\D/g, '');
-    if (digits.charAt(0) === '7' || digits.charAt(0) === '8') {
-      digits = digits.slice(1);
-    }
-    digits = digits.slice(0, 10);
-    if (!digits) {
-      return '';
-    }
-    var result = '+7 (' + digits.slice(0, 3);
-    if (digits.length > 3) {
-      result += ') ' + digits.slice(3, 6);
-    }
-    if (digits.length > 6) {
-      result += '-' + digits.slice(6, 8);
-    }
-    if (digits.length > 8) {
-      result += '-' + digits.slice(8, 10);
-    }
-    return result;
-  }
-
   function initForms() {
     toArray(document.querySelectorAll('[data-form]')).forEach(function (form) {
-      var phone = form.querySelector('input[type="tel"]');
-
-      if (phone) {
-        phone.addEventListener('input', function () {
-          phone.value = formatPhone(phone.value);
-        });
-      }
-
       form.addEventListener('input', clearInvalid);
       form.addEventListener('change', clearInvalid);
 
@@ -707,8 +677,6 @@
           var isValid;
           if (field.type === 'checkbox') {
             isValid = field.checked;
-          } else if (field.type === 'tel') {
-            isValid = field.value.replace(/\D/g, '').length === 11;
           } else {
             isValid = field.value.trim().length > 1;
           }

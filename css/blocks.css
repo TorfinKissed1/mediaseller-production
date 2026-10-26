@@ -42,15 +42,6 @@
   border-radius: var(--ms-radius-pill);
 }
 
-.btn--dark {
-  color: var(--ms-white);
-  background: #000;
-}
-
-.btn--dark:hover {
-  background: #1a2540;
-}
-
 .btn--ghost {
   color: var(--ms-white);
   background: rgba(255, 255, 255, 0.1);
