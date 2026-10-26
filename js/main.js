@@ -207,12 +207,23 @@
       return;
     }
     toArray(document.querySelectorAll('[data-marquee]')).forEach(function (track) {
-      toArray(track.children).forEach(function (item) {
-        var clone = item.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        track.appendChild(clone);
-      });
+      var items = toArray(track.children);
+      var setWidth = track.scrollWidth;
+      if (!items.length || !setWidth) {
+        return;
+      }
+      var sets = Math.max(1, Math.ceil(Math.max(window.screen.width, track.parentNode.clientWidth) / setWidth));
+      for (var copy = 1; copy < sets * 2; copy += 1) {
+        items.forEach(function (item) {
+          var clone = item.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          track.appendChild(clone);
+        });
+      }
       track.classList.add('is-running');
+      if (sets > 1) {
+        track.style.animationDuration = parseFloat(window.getComputedStyle(track).animationDuration) * sets + 's';
+      }
     });
   }
 
@@ -279,52 +290,66 @@
     var lastTime = 0;
     var lastScroll = window.pageYOffset;
 
-    for (var index = 0; index < ROWS; index += 1) {
+    var sourceIndexes = [];
+    cases.forEach(function (source, sourceIndex) {
+      if (showcase.contains(source)) {
+        sourceIndexes.push(sourceIndex);
+      }
+    });
+    if (!sourceIndexes.length) {
+      return;
+    }
+
+    for (var index = 0; index < Math.min(ROWS, sourceIndexes.length); index += 1) {
       var element = document.createElement('div');
       element.className = 'showcase__row';
       showcase.appendChild(element);
-      rows.push({ element: element, direction: index % 2 ? -1 : 1, offset: 0, period: 0, sources: [] });
+      rows.push({ element: element, direction: index % 2 ? -1 : 1, offset: 0, period: 0, sets: 0, sources: [] });
     }
 
-    var position = 0;
-    cases.forEach(function (source, sourceIndex) {
-      if (showcase.contains(source)) {
-        rows[position % ROWS].sources.push(sourceIndex);
-        position += 1;
-      }
+    sourceIndexes.forEach(function (sourceIndex, position) {
+      rows[position % rows.length].sources.push(sourceIndex);
     });
 
     rows.forEach(function (row) {
-      [false, true].forEach(function (isCopy) {
-        row.sources.forEach(function (sourceIndex) {
-          row.element.appendChild(createItem(sourceIndex, isCopy));
-        });
-      });
+      appendSet(row, false);
     });
+
+    function appendSet(row, isCopy) {
+      row.sources.forEach(function (sourceIndex) {
+        row.element.appendChild(createItem(sourceIndex, isCopy));
+      });
+      row.sets += 1;
+    }
 
     function createItem(sourceIndex, isCopy) {
       var source = cases[sourceIndex];
       var poster = source.querySelector('.case__poster');
+      var preview = source.getAttribute('data-preview');
       var item = document.createElement('button');
       item.type = 'button';
       item.className = 'showcase__item' + (source.hasAttribute('data-portrait') ? ' showcase__item--portrait' : '');
       item.setAttribute('data-ref', sourceIndex);
       item.setAttribute('aria-label', 'Смотреть: ' + source.getAttribute('data-title'));
-      if (source.getAttribute('data-preview')) {
-        item.setAttribute('data-preview', source.getAttribute('data-preview'));
-      }
       if (isCopy) {
         item.setAttribute('aria-hidden', 'true');
         item.tabIndex = -1;
       }
+      if (preview && canHover && !reduceMotion) {
+        var hoverPreview = attachPreview(item, item, preview, 'showcase__preview');
+        item.addEventListener('mouseenter', hoverPreview.start);
+        item.addEventListener('mouseleave', hoverPreview.stop);
+      }
 
-      var image = document.createElement('img');
-      image.className = 'showcase__poster';
-      image.src = poster.getAttribute('src');
-      image.alt = '';
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      item.appendChild(image);
+      if (poster) {
+        var image = document.createElement('img');
+        image.className = 'showcase__poster';
+        image.src = poster.getAttribute('src');
+        image.alt = '';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        item.appendChild(image);
+      }
 
       var caption = document.createElement('span');
       caption.className = 'showcase__caption';
@@ -341,9 +366,16 @@
     }
 
     function measure() {
+      var width = Math.max(window.screen.width, showcase.clientWidth);
       rows.forEach(function (row) {
         var gap = parseFloat(window.getComputedStyle(row.element).columnGap) || 0;
-        row.period = (row.element.scrollWidth + gap) / 2;
+        row.period = (row.element.scrollWidth + gap) / row.sets;
+        if (!row.period) {
+          return;
+        }
+        while (row.sets < 2 || row.period * (row.sets - 1) < width) {
+          appendSet(row, true);
+        }
       });
       render();
     }
@@ -443,11 +475,9 @@
   }
 
   function initPreviews() {
-    if (reduceMotion) {
+    if (reduceMotion || !canHover) {
       return;
     }
-    var watched = [];
-
     cases.forEach(function (item) {
       var source = item.getAttribute('data-preview');
       var media = item.querySelector('.case__media');
@@ -455,44 +485,8 @@
         return;
       }
       var preview = attachPreview(media, item, source, 'case__preview');
-      if (item.hasAttribute('data-autoplay')) {
-        watched.push({ element: item, preview: preview });
-        return;
-      }
-      if (canHover) {
-        media.addEventListener('mouseenter', preview.start);
-        media.addEventListener('mouseleave', preview.stop);
-      }
-    });
-
-    if (canHover) {
-      toArray(document.querySelectorAll('.showcase__item[data-preview]')).forEach(function (item) {
-        var preview = attachPreview(item, item, item.getAttribute('data-preview'), 'showcase__preview');
-        item.addEventListener('mouseenter', preview.start);
-        item.addEventListener('mouseleave', preview.stop);
-      });
-    }
-
-    if (!watched.length || !('IntersectionObserver' in window)) {
-      return;
-    }
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var match = watched.filter(function (candidate) {
-          return candidate.element === entry.target;
-        })[0];
-        if (!match) {
-          return;
-        }
-        if (entry.isIntersecting) {
-          match.preview.start();
-        } else {
-          match.preview.stop();
-        }
-      });
-    }, { threshold: 0.35 });
-    watched.forEach(function (candidate) {
-      observer.observe(candidate.element);
+      media.addEventListener('mouseenter', preview.start);
+      media.addEventListener('mouseleave', preview.stop);
     });
   }
 
@@ -537,14 +531,16 @@
         video.controls = true;
         video.autoplay = true;
         video.playsInline = true;
-        video.poster = poster.getAttribute('src');
+        if (poster) {
+          video.poster = poster.getAttribute('src');
+        }
         video.src = videoSource;
         frame.appendChild(video);
       } else {
         var image = document.createElement('img');
         image.className = 'player__image';
         image.src = item.getAttribute('data-image');
-        image.alt = poster.getAttribute('alt');
+        image.alt = poster ? poster.getAttribute('alt') : item.getAttribute('data-title');
         frame.appendChild(image);
       }
 
@@ -576,9 +572,8 @@
       }
       var clone = event.target.closest('.showcase__item');
       var opener = event.target.closest('[data-case-open]');
-      var media = opener
-        ? document.getElementById(opener.getAttribute('data-case-open')).querySelector('.case__media')
-        : event.target.closest('.case__media');
+      var target = opener && document.getElementById(opener.getAttribute('data-case-open'));
+      var media = target ? target.querySelector('.case__media') : event.target.closest('.case__media');
       if (clone) {
         list = cases;
         show(Number(clone.getAttribute('data-ref')));
